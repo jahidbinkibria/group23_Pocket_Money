@@ -1,0 +1,41 @@
+{
+  "name": "pocket_money",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack serve",
+    "build": "webpack",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Md Mahbub Alam Khan <hkhan.cse@gmail.com> (https://bluewindlab.net/)",
+  "license": "MIT",
+  "dependencies": {
+    "@babel/core": "7.18.9",
+    "@babel/preset-env": "7.18.9",
+    "@popperjs/core": "2.11.5",
+    "animate.css": "4.1.1",
+    "autoprefixer": "10.4.7",
+    "axios": "0.27.2",
+    "babel-loader": "8.2.5",
+    "bootstrap": "5.2.0",
+    "css-loader": "6.7.1",
+    "css-minimizer-webpack-plugin": "4.0.0",
+    "node-sass": "7.0.1",
+    "postcss-loader": "7.0.1",
+    "postcss-nested": "5.0.6",
+    "postcss-simple-vars": "6.0.3",
+    "style-loader": "3.3.1"
+  },
+  "devDependencies": {
+    "clean-webpack-plugin": "4.0.0",
+    "fs-extra": "10.1.0",
+    "html-webpack-plugin": "5.5.0",
+    "mini-css-extract-plugin": "2.6.1",
+    "postcss-import": "^14.0.0",
+    "sass-loader": "13.0.2",
+    "webpack": "5.74.0",
+    "webpack-cli": "4.10.0",
+    "webpack-dev-server": "4.9.3"
+  }
+}

@@ -1,0 +1,34 @@
+.app-container {
+    clear: both;
+    position: relative;
+}
+
+#close_popup {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    font-weight: bold;
+    background: #fff;
+    color: #000000;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: none;
+}
+
+.popup_overlfow {
+    overflow: hidden;
+}
+
+.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 5000px;
+    overflow: hidden;
+    background: rgba($color: #000000, $alpha: 0.85);
+}
