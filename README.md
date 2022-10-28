@@ -17,10 +17,15 @@ The scope of this project includes planning ,design, flow architecture, implemen
 \*\* Update those URL later.
 
 http://localhost:9000/wp-json/wp/v2/jobs
+
 http://localhost:9000/wp-json/wp/v2/jobs?\_fields=author,id,excerpt,title,link
+
 http://localhost:9000/wp-json/wp/v2/search
+
 http://localhost:9000/wp-json/wp/v2/add
+
 http://localhost:9000/wp-json/wp/v2/edit/{$id}
+
 http://localhost:9000/wp-json/wp/v2/delete/{$id}
 
 <h4>Create A React App</h4>
