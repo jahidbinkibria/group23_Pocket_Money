@@ -1,0 +1,15 @@
+info.txt
+SEP2_Sketch_v1.pdf
+
+wp-config.php
+wp-admin
+wp-includes
+
+!wp-content/plugins/
+wp-content/plugins/*
+!wp-content/plugins/pocket-money-api
+wp-content/plugins/pocket-money-api/node_modules
+
+!wp-content/themes/
+wp-content/themes/*
+!wp-content/themes/bwl-starter-theme

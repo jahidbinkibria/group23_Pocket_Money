@@ -1,0 +1,2382 @@
+# Copyright (C) 2013 TODO
+# This file is distributed under the same license as the TODO package.
+msgid ""
+msgstr ""
+"Project-Id-Version: Sharai Khana Vc Addon\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/plugins/plugin-name\n"
+"POT-Creation-Date: 2019-02-03 17:31+0600\n"
+"PO-Revision-Date: 2019-02-03 17:31+0600\n"
+"Last-Translator: FULL NAME <email@example.com>\n"
+"Language-Team: BlueWindLab <hkhan.cse@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;esc_html_e;esc_html__;esc_attr_e;"
+"esc_attr__\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPath-1: .\n"
+
+#: includes/theme_vc_helpers.php:40 includes/theme_vc_helpers.php:52
+#: includes/theme_vc_helpers.php:69 includes/theme_vc_helpers.php:81
+#: includes/theme_vc_helpers.php:93 includes/theme_vc_helpers.php:107
+#: wpb-addons/custom_elements/custom_elements.php:18
+#: wpb-addons/heading/heading.php:135 wpb-addons/pricetable/pricetable.php:137
+#: wpb-addons/process/process.php:15 wpb-addons/service/service.php:15
+#: wpb-addons/testimonial/testimonial.php:114
+msgid "Select"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:41
+msgid "Left"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:42 wpb-addons/video/video.php:98
+msgid "Center"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:43
+msgid "Right"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:70 wpb-addons/banner/banner.php:156
+#: wpb-addons/banner/banner.php:266 wpb-addons/blog_post/blog_post.php:71
+#: wpb-addons/button/button.php:63 wpb-addons/counter/counter.php:96
+#: wpb-addons/cta/cta.php:104 wpb-addons/gallery/gallery.php:72
+#: wpb-addons/heading/heading.php:110 wpb-addons/highlights/highlights.php:62
+#: wpb-addons/highlights/highlights.php:130 wpb-addons/logos/logos.php:62
+#: wpb-addons/logos/logos.php:73 wpb-addons/pricetable/pricetable.php:97
+#: wpb-addons/process/process.php:71 wpb-addons/process/process.php:96
+#: wpb-addons/service/service.php:60 wpb-addons/service/service.php:80
+#: wpb-addons/service/service.php:91 wpb-addons/slider/slider.php:56
+#: wpb-addons/slider/slider.php:66 wpb-addons/slider/slider.php:76
+#: wpb-addons/slider/slider.php:219 wpb-addons/slider/slider.php:307
+#: wpb-addons/slider/slider.php:416 wpb-addons/team/team.php:55
+#: wpb-addons/team/team.php:65 wpb-addons/team/team.php:76
+#: wpb-addons/team/team.php:260 wpb-addons/testimonial/testimonial.php:80
+#: wpb-addons/testimonial/testimonial.php:91
+msgid "Yes"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:71 wpb-addons/button/button.php:64
+#: wpb-addons/cta/cta.php:105 wpb-addons/highlights/highlights.php:129
+#: wpb-addons/pricetable/pricetable.php:96 wpb-addons/process/process.php:95
+#: wpb-addons/team/team.php:259
+msgid "No"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:82
+msgid "Ascending"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:83
+msgid "Descending"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:94
+msgid "ID"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:95
+msgid "TITLE"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:96
+msgid "Date"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:97
+msgid "Random"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:108 wpb-addons/counter/counter.php:11
+msgid "Layout 01"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:109 wpb-addons/counter/counter.php:12
+msgid "Layout 02"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:203
+msgid " (Default)"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:260 includes/theme_vc_helpers.php:274
+msgid "Seconds"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:288
+msgid "Milliseconds "
+msgstr ""
+
+#: includes/theme_vc_helpers.php:441
+msgid "Per Year"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:445
+msgid "Per Day"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:449
+msgid "Per Hour"
+msgstr ""
+
+#: includes/theme_vc_helpers.php:453
+msgid "Per Month"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:10 wpb-addons/cta/cta.php:10
+msgid "Layout 01 ( Single Column )"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:14 wpb-addons/button/button.php:10
+#: wpb-addons/cta/cta.php:91 wpb-addons/slider/slider.php:15
+msgid "Default Button"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:15 wpb-addons/button/button.php:11
+#: wpb-addons/cta/cta.php:92 wpb-addons/slider/slider.php:16
+msgid "Custom Button"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:19
+msgid "Static Banner"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:20
+msgid "Home Page Static Banner."
+msgstr ""
+
+#: wpb-addons/banner/banner.php:31
+msgid "Banner Text"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:42
+msgid "Alignment"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:52 wpb-addons/blog_post/blog_post.php:183
+#: wpb-addons/button/button.php:151 wpb-addons/contact_info/contact_info.php:119
+#: wpb-addons/counter/counter.php:104 wpb-addons/cta/cta.php:58
+#: wpb-addons/highlights/highlights.php:116
+#: wpb-addons/highlights/highlights.php:396
+#: wpb-addons/highlights/highlights.php:600 wpb-addons/logos/logos.php:84
+#: wpb-addons/pricetable/pricetable.php:59
+#: wpb-addons/pricetable/pricetable.php:261 wpb-addons/process/process.php:82
+#: wpb-addons/process/process.php:241 wpb-addons/service/service.php:102
+#: wpb-addons/service/service.php:294 wpb-addons/service/service.php:383
+#: wpb-addons/social_link/social_link.php:67 wpb-addons/team/team.php:168
+#: wpb-addons/team/team.php:237 wpb-addons/testimonial/testimonial.php:102
+#: wpb-addons/video/video.php:71
+msgid "Container Extra Class"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:55
+msgid "Add additional class to container."
+msgstr ""
+
+#: wpb-addons/banner/banner.php:62 wpb-addons/slider/slider.php:227
+msgid "Background Type"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:74
+msgid "Background Image"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:84 wpb-addons/slider/slider.php:250
+msgid "Image Overlay Color"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:87 wpb-addons/banner/banner.php:120
+#: wpb-addons/slider/slider.php:253
+msgid ""
+"Note: Please keep alpha to 100% and set ovarlay opacity in following drop "
+"down."
+msgstr ""
+
+#: wpb-addons/banner/banner.php:95 wpb-addons/slider/slider.php:261
+msgid "Image Overlay Opacity"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:106
+msgid "Enable Gradient Color?"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:117
+msgid "Overlay Color 02"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:128
+msgid "Overlay Opacity 02"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:140 wpb-addons/slider/slider.php:272
+msgid "Solid Background Color"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:154 wpb-addons/slider/slider.php:305
+msgid "Enable Button#1"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:164 wpb-addons/slider/slider.php:314
+msgid "Button#1 Text"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:174 wpb-addons/slider/slider.php:324
+msgid "Button#1 URL"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:184
+msgid "Button #1 Extra Class"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:187
+msgid "Add additional class of button#1."
+msgstr ""
+
+#: wpb-addons/banner/banner.php:195 wpb-addons/slider/slider.php:345
+msgid "Button#1 Theme"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:198 wpb-addons/banner/banner.php:309
+#: wpb-addons/slider/slider.php:87 wpb-addons/slider/slider.php:348
+#: wpb-addons/slider/slider.php:458
+msgid "Select custom to design your own button style."
+msgstr ""
+
+#: wpb-addons/banner/banner.php:206 wpb-addons/banner/banner.php:317
+#: wpb-addons/button/button.php:73 wpb-addons/cta/cta.php:115
+#: wpb-addons/slider/slider.php:356 wpb-addons/slider/slider.php:466
+msgid "Button Border Radius"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:209 wpb-addons/banner/banner.php:320
+#: wpb-addons/button/button.php:76 wpb-addons/cta/cta.php:118
+#: wpb-addons/slider/slider.php:359 wpb-addons/slider/slider.php:469
+msgid "Set button border radius."
+msgstr ""
+
+#: wpb-addons/banner/banner.php:217 wpb-addons/banner/banner.php:328
+#: wpb-addons/button/button.php:84 wpb-addons/cta/cta.php:126
+#: wpb-addons/slider/slider.php:367 wpb-addons/slider/slider.php:477
+msgid "Button Background"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:220 wpb-addons/banner/banner.php:331
+#: wpb-addons/button/button.php:87 wpb-addons/cta/cta.php:129
+#: wpb-addons/slider/slider.php:370 wpb-addons/slider/slider.php:480
+msgid "Set button background."
+msgstr ""
+
+#: wpb-addons/banner/banner.php:228 wpb-addons/banner/banner.php:339
+#: wpb-addons/button/button.php:95 wpb-addons/cta/cta.php:137
+#: wpb-addons/slider/slider.php:378 wpb-addons/slider/slider.php:488
+msgid "Button Text Color"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:231 wpb-addons/banner/banner.php:342
+#: wpb-addons/button/button.php:98 wpb-addons/cta/cta.php:140
+#: wpb-addons/slider/slider.php:381 wpb-addons/slider/slider.php:491
+msgid "Set button text color."
+msgstr ""
+
+#: wpb-addons/banner/banner.php:240 wpb-addons/banner/banner.php:351
+#: wpb-addons/button/button.php:118 wpb-addons/cta/cta.php:160
+#: wpb-addons/slider/slider.php:390 wpb-addons/slider/slider.php:500
+msgid "Button Hover Background"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:243 wpb-addons/banner/banner.php:354
+#: wpb-addons/button/button.php:121 wpb-addons/cta/cta.php:163
+#: wpb-addons/slider/slider.php:393 wpb-addons/slider/slider.php:503
+msgid "Set button hover background."
+msgstr ""
+
+#: wpb-addons/banner/banner.php:251 wpb-addons/banner/banner.php:362
+#: wpb-addons/button/button.php:129 wpb-addons/cta/cta.php:171
+#: wpb-addons/slider/slider.php:401 wpb-addons/slider/slider.php:511
+msgid "Button Hover Text Color"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:254 wpb-addons/banner/banner.php:365
+#: wpb-addons/button/button.php:132 wpb-addons/cta/cta.php:174
+#: wpb-addons/slider/slider.php:404 wpb-addons/slider/slider.php:514
+msgid "Set button hover text color."
+msgstr ""
+
+#: wpb-addons/banner/banner.php:264 wpb-addons/slider/slider.php:414
+msgid "Enable Button#2"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:274 wpb-addons/slider/slider.php:423
+msgid "Button#2 Text"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:285 wpb-addons/slider/slider.php:433
+msgid "Button#2 URL"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:295
+msgid "Button #2 Extra Class"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:298
+msgid "Add additional class of button#2."
+msgstr ""
+
+#: wpb-addons/banner/banner.php:306 wpb-addons/slider/slider.php:455
+msgid "Button#2 Theme"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:372 wpb-addons/blog_post/blog_post.php:225
+#: wpb-addons/button/button.php:160 wpb-addons/counter/counter.php:181
+#: wpb-addons/heading/heading.php:210 wpb-addons/highlights/highlights.php:228
+#: wpb-addons/highlights/highlights.php:699 wpb-addons/logos/logos.php:117
+#: wpb-addons/pricetable/pricetable.php:68
+#: wpb-addons/pricetable/pricetable.php:418 wpb-addons/service/service.php:135
+#: wpb-addons/service/service.php:417 wpb-addons/team/team.php:177
+#: wpb-addons/team/team.php:297 wpb-addons/video/video.php:132
+msgid "Animation Style"
+msgstr ""
+
+#: wpb-addons/banner/banner.php:374 wpb-addons/blog_post/blog_post.php:227
+#: wpb-addons/button/button.php:162 wpb-addons/counter/counter.php:183
+#: wpb-addons/heading/heading.php:212 wpb-addons/highlights/highlights.php:230
+#: wpb-addons/highlights/highlights.php:701 wpb-addons/logos/logos.php:119
+#: wpb-addons/pricetable/pricetable.php:70
+#: wpb-addons/pricetable/pricetable.php:420 wpb-addons/service/service.php:419
+#: wpb-addons/slider/slider.php:179 wpb-addons/slider/slider.php:189
+#: wpb-addons/team/team.php:179 wpb-addons/team/team.php:299
+#: wpb-addons/video/video.php:134
+msgid "Choose your animation style"
+msgstr ""
+
+#: wpb-addons/banner/shortcodes/banner_shortcode.php:20
+#: wpb-addons/banner/shortcodes/banner_shortcode.php:51
+#: wpb-addons/cta/shortcodes/cta_shortcode.php:20
+#: wpb-addons/slider/shortcodes/slider_shortcode.php:123
+msgid "JOIN WITH US"
+msgstr ""
+
+#: wpb-addons/banner/shortcodes/banner_shortcode.php:36
+#: wpb-addons/slider/shortcodes/slider_shortcode.php:107
+msgid "BOOK APPOINTMENT"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:47
+msgid "Blog Posts"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:48
+msgid "Place Blog Posts In Page."
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:58 wpb-addons/cta/cta.php:27
+#: wpb-addons/heading/heading.php:35 wpb-addons/highlights/highlights.php:501
+#: wpb-addons/service/service.php:40 wpb-addons/service/service.php:321
+#: wpb-addons/slider/slider.php:35 wpb-addons/video/video.php:26
+msgid "Layout"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:69 wpb-addons/highlights/highlights.php:60
+#: wpb-addons/service/service.php:58 wpb-addons/team/team.php:53
+msgid "Enable Carousel?"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:78
+msgid "Column"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:89 wpb-addons/highlights/highlights.php:106
+#: wpb-addons/highlights/highlights.php:610
+#: wpb-addons/pricetable/pricetable.php:271 wpb-addons/slider/slider.php:283
+msgid "Content Alignment"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:93
+msgid "Set content alignment of Blog Post block."
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:101
+msgid "Blog Category"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:111
+msgid "Description Length"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:120
+msgid "Post Limit"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:129
+msgid "Post Order"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:138
+msgid "Post Order By"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:149 wpb-addons/highlights/highlights.php:69
+msgid "Hide Carousel Navigation"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:153 wpb-addons/highlights/highlights.php:73
+msgid "You can show/hide two arrow will display beside the carousel items."
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:159 wpb-addons/highlights/highlights.php:80
+msgid "Hide Carousel Dots"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:163 wpb-addons/highlights/highlights.php:84
+msgid "You can show/hide bottom will display below the carousel items."
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:169 wpb-addons/gallery/gallery.php:80
+#: wpb-addons/highlights/highlights.php:91 wpb-addons/logos/logos.php:49
+#: wpb-addons/process/process.php:58 wpb-addons/service/service.php:67
+#: wpb-addons/slider/slider.php:44 wpb-addons/team/team.php:84
+#: wpb-addons/testimonial/testimonial.php:67
+msgid "Auto Play Time Out"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:173 wpb-addons/gallery/gallery.php:84
+#: wpb-addons/highlights/highlights.php:95 wpb-addons/logos/logos.php:53
+#: wpb-addons/process/process.php:62 wpb-addons/service/service.php:71
+#: wpb-addons/slider/slider.php:48 wpb-addons/team/team.php:88
+#: wpb-addons/testimonial/testimonial.php:71
+msgid "Select scroll speed."
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:186
+msgid "Add additional class of blog post box."
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:193
+#: wpb-addons/highlights/highlights.php:126 wpb-addons/process/process.php:92
+msgid "Enable Box Shadow?"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:197
+msgid "You can add box shadow animation in blog post box."
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:203
+#: wpb-addons/contact_info/contact_info.php:84 wpb-addons/counter/counter.php:114
+#: wpb-addons/faq/faq.php:25 wpb-addons/gallery/gallery.php:102
+#: wpb-addons/highlights/highlights.php:139
+#: wpb-addons/highlights/highlights.php:406
+#: wpb-addons/highlights/highlights.php:620 wpb-addons/logos/logos.php:94
+#: wpb-addons/process/process.php:105 wpb-addons/process/process.php:260
+#: wpb-addons/service/service.php:112 wpb-addons/service/service.php:234
+#: wpb-addons/service/service.php:393 wpb-addons/team/team.php:98
+#: wpb-addons/testimonial/testimonial.php:125 wpb-addons/video/video.php:109
+msgid "Select Theme"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:206
+#: wpb-addons/contact_info/contact_info.php:87 wpb-addons/counter/counter.php:117
+#: wpb-addons/faq/faq.php:28 wpb-addons/gallery/gallery.php:105
+#: wpb-addons/heading/heading.php:17 wpb-addons/highlights/highlights.php:142
+#: wpb-addons/highlights/highlights.php:409
+#: wpb-addons/highlights/highlights.php:623 wpb-addons/logos/logos.php:97
+#: wpb-addons/process/process.php:108 wpb-addons/process/process.php:263
+#: wpb-addons/service/service.php:115 wpb-addons/service/service.php:237
+#: wpb-addons/service/service.php:396 wpb-addons/team/team.php:101
+#: wpb-addons/testimonial/testimonial.php:128 wpb-addons/video/video.php:112
+msgid "Default"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:207
+#: wpb-addons/contact_info/contact_info.php:88 wpb-addons/counter/counter.php:118
+#: wpb-addons/faq/faq.php:29 wpb-addons/gallery/gallery.php:106
+#: wpb-addons/heading/heading.php:18 wpb-addons/highlights/highlights.php:143
+#: wpb-addons/highlights/highlights.php:410
+#: wpb-addons/highlights/highlights.php:624 wpb-addons/logos/logos.php:98
+#: wpb-addons/process/process.php:109 wpb-addons/process/process.php:264
+#: wpb-addons/service/service.php:116 wpb-addons/service/service.php:238
+#: wpb-addons/service/service.php:397 wpb-addons/team/team.php:102
+#: wpb-addons/testimonial/testimonial.php:129 wpb-addons/video/video.php:113
+msgid "Custom"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:210
+#: wpb-addons/contact_info/contact_info.php:91 wpb-addons/counter/counter.php:121
+#: wpb-addons/faq/faq.php:32 wpb-addons/gallery/gallery.php:109
+#: wpb-addons/highlights/highlights.php:146 wpb-addons/logos/logos.php:101
+#: wpb-addons/process/process.php:112 wpb-addons/team/team.php:105
+#: wpb-addons/testimonial/testimonial.php:132 wpb-addons/video/video.php:116
+msgid "Choose Custom to create your own theme."
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:216
+#: wpb-addons/contact_info/contact_info.php:97 wpb-addons/gallery/gallery.php:128
+#: wpb-addons/highlights/highlights.php:185
+#: wpb-addons/highlights/highlights.php:442
+#: wpb-addons/highlights/highlights.php:656 wpb-addons/logos/logos.php:107
+#: wpb-addons/process/process.php:118 wpb-addons/service/service.php:125
+#: wpb-addons/service/service.php:407 wpb-addons/team/team.php:124
+#: wpb-addons/testimonial/testimonial.php:137 wpb-addons/video/video.php:122
+msgid "Theme Color"
+msgstr ""
+
+#: wpb-addons/blog_post/blog_post.php:219
+msgid "This color will apply in carousel navigation button."
+msgstr ""
+
+#: wpb-addons/blog_post/shortcodes/blog_post_shortcode.php:217
+msgid "Sorry, No news found!"
+msgstr ""
+
+#: wpb-addons/button/button.php:15
+msgid "Buttons"
+msgstr ""
+
+#: wpb-addons/button/button.php:16
+msgid "Place Buttons In Page."
+msgstr ""
+
+#: wpb-addons/button/button.php:27 wpb-addons/highlights/highlights.php:362
+#: wpb-addons/highlights/highlights.php:577
+#: wpb-addons/pricetable/pricetable.php:227
+msgid "Button Text"
+msgstr ""
+
+#: wpb-addons/button/button.php:30
+msgid "Add button text."
+msgstr ""
+
+#: wpb-addons/button/button.php:38
+msgid "Button Info"
+msgstr ""
+
+#: wpb-addons/button/button.php:41
+msgid "Add button info."
+msgstr ""
+
+#: wpb-addons/button/button.php:50 wpb-addons/heading/heading.php:147
+msgid "Theme"
+msgstr ""
+
+#: wpb-addons/button/button.php:53 wpb-addons/cta/cta.php:94
+msgid "Select button theme"
+msgstr ""
+
+#: wpb-addons/button/button.php:60 wpb-addons/cta/cta.php:101
+msgid "Display Button Border"
+msgstr ""
+
+#: wpb-addons/button/button.php:66 wpb-addons/cta/cta.php:107
+msgid "Set No, if you hide button border."
+msgstr ""
+
+#: wpb-addons/button/button.php:106 wpb-addons/cta/cta.php:148
+msgid "Button Border Color"
+msgstr ""
+
+#: wpb-addons/button/button.php:109 wpb-addons/cta/cta.php:151
+msgid "Set button border color."
+msgstr ""
+
+#: wpb-addons/button/button.php:140 wpb-addons/cta/cta.php:182
+msgid "Button Hover Border Color"
+msgstr ""
+
+#: wpb-addons/button/button.php:143 wpb-addons/cta/cta.php:185
+msgid "Set button hover border color."
+msgstr ""
+
+#: wpb-addons/button/button.php:154 wpb-addons/cta/cta.php:61
+msgid "Add additional class of button."
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:10
+msgid "Square Box"
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:11
+msgid "Rounded Box"
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:15
+msgid "Contact Info"
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:16
+msgid "Place Contact Info In Page."
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:27
+msgid "Address"
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:30
+msgid "Add your address."
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:38
+msgid "Phone"
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:41
+msgid "Add Phone Number."
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:49
+msgid "Email"
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:52
+msgid "Add Email Address. (Seperate multiple email by a comma)"
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:60
+msgid "Web URL"
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:63
+msgid "Add Site URL. (Seperate multiple site by a comma)"
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:74
+#: wpb-addons/testimonial/testimonial.php:50
+msgid "Icon Style"
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:78
+msgid "Select icon layout style."
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:100
+msgid "This color will apply in icon background."
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:108
+#: wpb-addons/counter/counter.php:149
+msgid "Icon Color"
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:111
+msgid "This color will apply in icon color."
+msgstr ""
+
+#: wpb-addons/contact_info/contact_info.php:122
+msgid "Add additional class for contact info layout."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:10 wpb-addons/counter/counter.php:16
+#: wpb-addons/gallery/gallery.php:11 wpb-addons/logos/logos.php:10
+#: wpb-addons/pricetable/pricetable.php:16 wpb-addons/slider/slider.php:10
+#: wpb-addons/team/team.php:10 wpb-addons/team/team.php:44
+#: wpb-addons/testimonial/testimonial.php:10
+msgid "SELECT"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:17 wpb-addons/pricetable/pricetable.php:19
+msgid "4 items each row (Default)"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:18 wpb-addons/pricetable/pricetable.php:18
+msgid "3 items each row"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:19 wpb-addons/pricetable/pricetable.php:17
+msgid "2 items each row"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:25
+msgid "Counters"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:26
+msgid "Place Counter In Page."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:41
+msgid "Counter Layout"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:45
+msgid "Select counter layout style."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:49 wpb-addons/gallery/gallery.php:49
+#: wpb-addons/highlights/highlights.php:49
+#: wpb-addons/pricetable/pricetable.php:49 wpb-addons/process/process.php:50
+#: wpb-addons/service/service.php:48
+msgid "Choose Column"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:53 wpb-addons/pricetable/pricetable.php:53
+msgid "Number of items display each row."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:57 wpb-addons/process/process.php:250
+#: wpb-addons/service/service.php:224 wpb-addons/team/team.php:246
+#: wpb-addons/testimonial/testimonial.php:111
+msgid "Select Content Alignment"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:61
+msgid "Set content alignment of each counter block."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:66
+msgid "Disable Count Up?"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:70
+msgid "Select Yes to disable count up animation."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:75
+msgid "Count Time"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:79
+msgid "The total duration of the count up animation."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:84
+msgid "Count Delay"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:88
+msgid "The delay in milliseconds per number count up."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:94
+msgid "Hide Icon?"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:107
+msgid "Add additional class for counter layout."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:127
+msgid "Counter Color"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:130
+msgid "Set counter color."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:138
+msgid "Text Color"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:141
+msgid "Set text color."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:152
+msgid "Set icon color."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:160
+msgid "Border & Seperator Color"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:163
+msgid "Set border & seperator color."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:171
+msgid "Counter Box Background"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:174
+msgid "Set counter box background. (Only for Layout 01)"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:194
+msgid "Counter Item"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:207
+msgid "Counter Value"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:210
+msgid "Add any number. Please do not add string."
+msgstr ""
+
+#: wpb-addons/counter/counter.php:218
+msgid "Counter Text"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:228
+msgid "Counter Post Fix"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:231
+msgid "Add any symbol after the counter value. Example: %, + "
+msgstr ""
+
+#: wpb-addons/counter/counter.php:237 wpb-addons/gallery/gallery.php:114
+#: wpb-addons/highlights/highlights.php:286
+#: wpb-addons/highlights/highlights.php:543
+#: wpb-addons/pricetable/pricetable.php:200 wpb-addons/process/process.php:183
+msgid "Icon"
+msgstr ""
+
+#: wpb-addons/counter/counter.php:245 wpb-addons/gallery/gallery.php:122
+#: wpb-addons/highlights/highlights.php:294
+#: wpb-addons/highlights/highlights.php:551
+#: wpb-addons/pricetable/pricetable.php:208 wpb-addons/process/process.php:191
+#: wpb-addons/service/service.php:188 wpb-addons/service/service.php:356
+#: wpb-addons/slider/slider.php:124 wpb-addons/slider/slider.php:139
+#: wpb-addons/video/video.php:53
+msgid "Select icon from library."
+msgstr ""
+
+#: wpb-addons/cta/cta.php:11
+msgid "Layout 02 ( Double Columns )"
+msgstr ""
+
+#: wpb-addons/cta/cta.php:15
+msgid "CTA Block"
+msgstr ""
+
+#: wpb-addons/cta/cta.php:16
+msgid "Display Call To Action Box In Page."
+msgstr ""
+
+#: wpb-addons/cta/cta.php:30 wpb-addons/video/video.php:29
+msgid "Select Layout of Call To Action Box"
+msgstr ""
+
+#: wpb-addons/cta/cta.php:38
+msgid "CTA Text"
+msgstr ""
+
+#: wpb-addons/cta/cta.php:48
+msgid "CTA Link"
+msgstr ""
+
+#: wpb-addons/cta/cta.php:68
+msgid "CTA Content Alignment"
+msgstr ""
+
+#: wpb-addons/cta/cta.php:78
+msgid "CTA Button Alignment"
+msgstr ""
+
+#: wpb-addons/cta/cta.php:88
+msgid "CTA Button Theme"
+msgstr ""
+
+#: wpb-addons/custom_elements/custom_elements.php:8
+msgid "Disable it if you want to get full width row."
+msgstr ""
+
+#: wpb-addons/custom_elements/custom_elements.php:19
+msgid "Section Layout Class"
+msgstr ""
+
+#: wpb-addons/custom_elements/custom_elements.php:20
+msgid "No Padding Layout Class"
+msgstr ""
+
+#: wpb-addons/custom_elements/custom_elements.php:21
+msgid "No Bottom Padding Layout Class"
+msgstr ""
+
+#: wpb-addons/custom_elements/custom_elements.php:29
+msgid "Select Custom Class For Row"
+msgstr ""
+
+#: wpb-addons/faq/faq.php:11
+msgid "FAQs"
+msgstr ""
+
+#: wpb-addons/faq/faq.php:12
+msgid "Place Faq In Page."
+msgstr ""
+
+#: wpb-addons/faq/faq.php:39
+msgid "FAQ title color"
+msgstr ""
+
+#: wpb-addons/faq/faq.php:42
+msgid "This color will apply in faq title text."
+msgstr ""
+
+#: wpb-addons/faq/faq.php:50
+msgid "FAQ title background"
+msgstr ""
+
+#: wpb-addons/faq/faq.php:53
+msgid "This color will apply in faq title background."
+msgstr ""
+
+#: wpb-addons/faq/faq.php:62
+msgid "FAQ details color"
+msgstr ""
+
+#: wpb-addons/faq/faq.php:65
+msgid "This color will apply in faq details text."
+msgstr ""
+
+#: wpb-addons/faq/faq.php:73
+msgid "FAQ details background"
+msgstr ""
+
+#: wpb-addons/faq/faq.php:76
+msgid "This color will apply in faq details background."
+msgstr ""
+
+#: wpb-addons/faq/faq.php:86
+msgid "FAQ Item"
+msgstr ""
+
+#: wpb-addons/faq/faq.php:98 wpb-addons/heading/heading.php:46
+#: wpb-addons/highlights/highlights.php:254
+#: wpb-addons/highlights/highlights.php:511 wpb-addons/process/process.php:143
+#: wpb-addons/service/service.php:160 wpb-addons/service/service.php:331
+msgid "Title"
+msgstr ""
+
+#: wpb-addons/faq/faq.php:104 wpb-addons/pricetable/pricetable.php:165
+msgid "Details"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:12
+msgid "Layout 01 (Simple)"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:13
+msgid "Layout 02 (Carousel)"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:17 wpb-addons/highlights/highlights.php:16
+msgid "4 Columns (Default)"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:18 wpb-addons/highlights/highlights.php:17
+msgid "3 Columns"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:19 wpb-addons/highlights/highlights.php:18
+#: wpb-addons/process/process.php:18 wpb-addons/service/service.php:18
+msgid "2 Columns"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:20 wpb-addons/highlights/highlights.php:19
+#: wpb-addons/process/process.php:19 wpb-addons/service/service.php:19
+msgid "1 Column"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:26
+msgid "Gallery"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:27
+msgid "Place Gallery In Page."
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:40
+msgid "Choose Layout"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:44
+msgid "Select gallery layout style."
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:53 wpb-addons/highlights/highlights.php:53
+#: wpb-addons/process/process.php:54 wpb-addons/service/service.php:52
+msgid "Select number columns each row."
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:60 wpb-addons/logos/logos.php:41
+#: wpb-addons/team/team.php:42
+msgid "Items Per Row"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:64 wpb-addons/logos/logos.php:45
+#: wpb-addons/team/team.php:46
+msgid "Select no of item you like to show each row."
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:70 wpb-addons/process/process.php:69
+msgid "Hide Carousel Navigation Button?"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:92
+msgid "Enable No Padding Gallery"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:96
+msgid "If you select yes, then there will no space between each column."
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:131
+msgid "This color will apply in overlay & Icon color button."
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:140
+msgid "Gallery Item"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:150
+msgid "Choose Image"
+msgstr ""
+
+#: wpb-addons/gallery/gallery.php:152
+msgid "Select gallery image."
+msgstr ""
+
+#: wpb-addons/heading/heading.php:10
+msgid "Layout 01 (Default)"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:11
+msgid "Layout 02 (Only Heading)"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:12
+msgid "Inline Heading"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:13
+msgid "Light Heading (For Black Background)"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:24
+msgid "Heading Block"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:25
+msgid "Place Heading In Page."
+msgstr ""
+
+#: wpb-addons/heading/heading.php:49
+msgid "Title will be displayed below the separator."
+msgstr ""
+
+#: wpb-addons/heading/heading.php:56
+msgid "Additional Heading Title Class"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:59
+msgid "Example: heading-alt-style"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:67
+msgid "Sub Title"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:70
+msgid "Sub Title will be displayed above the separator."
+msgstr ""
+
+#: wpb-addons/heading/heading.php:78
+msgid "Additional Heading Sub Title Class"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:81
+msgid "Example: subheading-alt-style"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:88
+msgid "Alter Heading Content Position"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:91
+msgid ""
+"If you select Yes, then title will be displayed followed by the Sub title."
+msgstr ""
+
+#: wpb-addons/heading/heading.php:98
+msgid "Select Heading Content Alignment"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:102
+msgid "Set content alignment of heading block."
+msgstr ""
+
+#: wpb-addons/heading/heading.php:108
+msgid "Enable Horizontal Separator?"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:111
+msgid "A horizontal line will be appeared between title and sub title."
+msgstr ""
+
+#: wpb-addons/heading/heading.php:118
+msgid "Separator Attachment?"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:121
+msgid "Between Heading Title & Sub Title"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:122
+msgid "With Heading Title"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:123
+msgid "With Heading Sub Title"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:132
+msgid "Separator Position?"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:136
+msgid "After Text"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:137
+msgid "Before Text"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:157
+msgid "Separator Color"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:168
+msgid "Title Color"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:179
+msgid "Sub Title Color"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:190
+msgid "Border Upper Color"
+msgstr ""
+
+#: wpb-addons/heading/heading.php:201
+msgid "Border Bottom Color"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:10
+msgid "Layout 01 ( Icon Box Top )"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:11
+msgid "Layout 02 ( Transparent Icon Box Top )"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:12
+msgid "Layout 03 ( Transparent Icon Box Right )"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:25
+msgid "Highlight Box"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:26
+msgid "Add Multiple Highlight Blocks."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:41
+msgid "Highlight Layout"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:45
+msgid "Select highlight layout style."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:119
+#: wpb-addons/highlights/highlights.php:399
+#: wpb-addons/highlights/highlights.php:603 wpb-addons/service/service.php:297
+msgid "Add additional class of highlight box."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:133 wpb-addons/process/process.php:99
+msgid "You can add box shadow animation in highlight box."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:152
+msgid "Navigation Theme Color"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:155
+msgid ""
+"This color will apply in seperator line, carousel navigation arrows and dots."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:163
+#: wpb-addons/highlights/highlights.php:420
+#: wpb-addons/highlights/highlights.php:634 wpb-addons/process/process.php:274
+#: wpb-addons/service/service.php:248
+msgid "Box Background"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:166
+#: wpb-addons/highlights/highlights.php:423
+#: wpb-addons/highlights/highlights.php:637
+msgid "Regular highlight box background."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:174
+#: wpb-addons/highlights/highlights.php:431
+#: wpb-addons/highlights/highlights.php:645 wpb-addons/process/process.php:285
+#: wpb-addons/service/service.php:281
+msgid "Box Hover Background"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:177
+#: wpb-addons/highlights/highlights.php:434
+#: wpb-addons/highlights/highlights.php:648
+msgid "On mouse hover highlight box background."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:188
+msgid ""
+"This color will apply in Icon background ( For Layout 1 ), Icon color "
+"(layout 02, layout 03), seperator and button background."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:196
+#: wpb-addons/highlights/highlights.php:453
+#: wpb-addons/highlights/highlights.php:667
+msgid "Theme Hover Color"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:199
+#: wpb-addons/highlights/highlights.php:456
+#: wpb-addons/highlights/highlights.php:670
+msgid ""
+"On mouse hover this color will apply in Icon background ( For Layout 1 ), "
+"Icon color (layout 02, layout 03), seperator and button background (mouse "
+"hover mode)."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:207
+#: wpb-addons/highlights/highlights.php:464
+#: wpb-addons/highlights/highlights.php:678
+msgid "Show Border?"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:211
+#: wpb-addons/highlights/highlights.php:468
+#: wpb-addons/highlights/highlights.php:682
+msgid "Hide border from highlight box."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:218
+#: wpb-addons/highlights/highlights.php:475
+#: wpb-addons/highlights/highlights.php:689
+msgid "Border Color"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:221
+#: wpb-addons/highlights/highlights.php:478
+#: wpb-addons/highlights/highlights.php:692
+msgid "Set border color."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:242
+msgid "Highlight Item"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:257
+msgid "Set the heading of highlights box. Example - Support Forum."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:263
+#: wpb-addons/highlights/highlights.php:520 wpb-addons/process/process.php:152
+msgid "Content"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:266
+msgid "Write a brief about highlight content."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:274
+#: wpb-addons/highlights/highlights.php:531
+#: wpb-addons/pricetable/pricetable.php:178
+msgid "Icon Type"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:277
+#: wpb-addons/highlights/highlights.php:534 wpb-addons/process/process.php:166
+msgid "Font Awesome Icon ( Default )"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:278
+#: wpb-addons/highlights/highlights.php:535 wpb-addons/process/process.php:165
+msgid "Custom Image"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:281
+#: wpb-addons/highlights/highlights.php:356
+#: wpb-addons/highlights/highlights.php:538
+#: wpb-addons/highlights/highlights.php:571
+msgid "Display read more button in highlight box."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:300
+#: wpb-addons/highlights/highlights.php:557
+msgid "Highlight Image"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:302
+#: wpb-addons/highlights/highlights.php:559
+msgid "Add Highlight image"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:311
+msgid "Enable Badge?"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:315
+msgid "Display Badge Box in highlight box."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:321
+msgid "Badge Text"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:324
+msgid "Example - New, Hot, Speical etc."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:332
+msgid "Badge Theme?"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:345
+msgid "Select badge theme."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:352
+#: wpb-addons/highlights/highlights.php:567
+msgid "Enable Read More Button"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:364
+#: wpb-addons/highlights/highlights.php:579
+#: wpb-addons/highlights/shortcodes/highlights_shortcode.php:153
+#: wpb-addons/highlights/shortcodes/highlights_shortcode.php:411
+msgid "Read More"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:365
+#: wpb-addons/highlights/highlights.php:580
+msgid "Set custom text for button. Default - Read more"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:373
+#: wpb-addons/highlights/highlights.php:588
+msgid "Read More Link"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:376
+#: wpb-addons/highlights/highlights.php:591
+msgid "You can set custom link of heading/read more button."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:383
+msgid "Additional Button Class"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:386
+msgid "Set custom class for button."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:413
+#: wpb-addons/highlights/highlights.php:627
+msgid "Choose Custom to create your own highlight box."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:445
+#: wpb-addons/highlights/highlights.php:659
+msgid ""
+"This color will apply in Icon background ( For Layout 1 ), Icon color "
+"(layout 02, layout 03), seperator and button background (mouse hover mode)."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:489
+msgid "Single Highlight Box"
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:490
+msgid "Add Single Highlight Block."
+msgstr ""
+
+#: wpb-addons/highlights/highlights.php:505 wpb-addons/service/service.php:325
+msgid "Select layout style."
+msgstr ""
+
+#: wpb-addons/logos/logos.php:11
+msgid "Simple Layout"
+msgstr ""
+
+#: wpb-addons/logos/logos.php:12 wpb-addons/process/process.php:11
+#: wpb-addons/testimonial/testimonial.php:11
+msgid "Carousel Layout"
+msgstr ""
+
+#: wpb-addons/logos/logos.php:17
+msgid "Logos"
+msgstr ""
+
+#: wpb-addons/logos/logos.php:18
+msgid "Place Logo In Page."
+msgstr ""
+
+#: wpb-addons/logos/logos.php:33
+msgid "Logos Layout"
+msgstr ""
+
+#: wpb-addons/logos/logos.php:37
+msgid "Select logo layout style."
+msgstr ""
+
+#: wpb-addons/logos/logos.php:60 wpb-addons/service/service.php:78
+#: wpb-addons/team/team.php:63 wpb-addons/testimonial/testimonial.php:78
+msgid "Hide Carousel Navigation Arrow?"
+msgstr ""
+
+#: wpb-addons/logos/logos.php:71 wpb-addons/service/service.php:89
+#: wpb-addons/team/team.php:74 wpb-addons/testimonial/testimonial.php:89
+msgid "Hide Carousel Navigation Dots?"
+msgstr ""
+
+#: wpb-addons/logos/logos.php:87
+msgid "Add additional class for logo layout."
+msgstr ""
+
+#: wpb-addons/logos/logos.php:110
+msgid "This color will apply in logo border and navigation button."
+msgstr ""
+
+#: wpb-addons/logos/logos.php:130
+msgid "LOGO ITEM"
+msgstr ""
+
+#: wpb-addons/logos/logos.php:140
+msgid "Logo Title"
+msgstr ""
+
+#: wpb-addons/logos/logos.php:147
+msgid "Logo Image"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:11
+msgid "Layout 01 (Simple Column Grid)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:12
+msgid "Layout 02 (No Column Padding Grid)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:24
+msgid "Pricetable"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:25
+msgid "Place Pricetable In Page."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:41
+msgid "Price Table Layout"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:45
+msgid "Select pricetable layout style."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:62
+#: wpb-addons/pricetable/pricetable.php:264
+msgid "Add additional class of pricing table box."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:81
+msgid "Pricetable Item"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:93
+msgid "Featured Plan?"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:107
+msgid "Label"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:110
+msgid "Example: Basic, Standard, Business, Premium etc."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:116
+msgid "Currency"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:119
+msgid "Example: $"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:125
+msgid "Price"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:128
+msgid "Example: 10, 10.99 or any numeric value."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:134
+msgid "Period"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:138
+msgid "Yearly"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:139
+msgid "Monthly"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:140
+msgid "Daily"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:141
+msgid "Hourly"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:143
+msgid "Choose plan duration."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:153
+msgid "Details Type"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:156
+msgid "Lists"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:157
+msgid "Compact"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:181
+msgid "Image Icon"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:182
+msgid "Font Awesome Icon"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:183
+msgid "No Image"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:191
+msgid "Pricetable Image"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:193
+msgid "Add pricetable image. Recommended Size: 64 X 64 px."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:217
+msgid "Enable Button"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:221
+msgid "Display CTA button in pricing table."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:229
+#: wpb-addons/pricetable/shortcodes/pricetable_shortcode.php:61
+msgid "Learn More &raquo;"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:230
+msgid "Set custom text for button. Default - Purchase Now"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:238
+msgid "Button Link"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:241
+msgid "You can set custom link of read more button."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:249
+msgid "Button Extra Class"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:252
+msgid "Add additional class of pricing table button."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:274
+msgid "You can set pricing table content alignment."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:283
+msgid "Box Background (Regular)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:286 wpb-addons/process/process.php:277
+msgid "Set box background."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:294
+msgid "Label Color (Regular)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:297
+msgid "Set regular pricetable type color."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:305
+msgid "Currency Color (Regular)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:308
+msgid "Set regular pricetable currency color."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:316
+msgid "Price Color (Regular)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:319
+msgid "Set regular pricetable price color."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:327
+msgid "Period Color (Regular)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:330
+msgid "Set regular pricetable period color."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:338
+msgid "Details (Regular)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:341
+msgid "Set regular pricetable details color."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:351
+msgid "Box Background (Featured)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:354
+msgid "Set featured box background."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:362
+msgid "Label Color (Featured)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:365
+msgid "Set featured pricetable type color."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:373
+msgid "Currency Color (Featured)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:376
+msgid "Set featured pricetable Currency color."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:384
+msgid "Price Color (Featured)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:387
+msgid "Set featured pricetable Price color."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:395
+msgid "Period Color (Featured)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:398
+msgid "Set featured pricetable period color."
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:406
+msgid "Details (Featured)"
+msgstr ""
+
+#: wpb-addons/pricetable/pricetable.php:409
+msgid "Set featured pricetable details color."
+msgstr ""
+
+#: wpb-addons/pricetable/shortcodes/pricetable_shortcode.php:86
+msgid "GET STARTED"
+msgstr ""
+
+#: wpb-addons/process/process.php:10
+msgid "Grid Layout (Default)"
+msgstr ""
+
+#: wpb-addons/process/process.php:16 wpb-addons/service/service.php:16
+msgid "4 Columns"
+msgstr ""
+
+#: wpb-addons/process/process.php:17 wpb-addons/service/service.php:17
+msgid "3 Columns (Default)"
+msgstr ""
+
+#: wpb-addons/process/process.php:26
+msgid "Process Block"
+msgstr ""
+
+#: wpb-addons/process/process.php:27
+msgid "Add multiple process blocks."
+msgstr ""
+
+#: wpb-addons/process/process.php:42
+msgid "Process Layout"
+msgstr ""
+
+#: wpb-addons/process/process.php:46
+msgid "Select process layout style."
+msgstr ""
+
+#: wpb-addons/process/process.php:85 wpb-addons/process/process.php:244
+msgid "Add additional class for this block."
+msgstr ""
+
+#: wpb-addons/process/process.php:121
+msgid "This color will apply in process navigation button."
+msgstr ""
+
+#: wpb-addons/process/process.php:131
+msgid "Process Item"
+msgstr ""
+
+#: wpb-addons/process/process.php:146
+msgid "Set the heading of process box. Example - REGISTRATION."
+msgstr ""
+
+#: wpb-addons/process/process.php:155
+msgid "Write a brief about process content."
+msgstr ""
+
+#: wpb-addons/process/process.php:162
+msgid "Choose Icon Type"
+msgstr ""
+
+#: wpb-addons/process/process.php:169
+msgid "Display read more button in process box."
+msgstr ""
+
+#: wpb-addons/process/process.php:174
+msgid "Process Image"
+msgstr ""
+
+#: wpb-addons/process/process.php:176
+msgid "Add process image. Recommended Size: 72 X 72 px."
+msgstr ""
+
+#: wpb-addons/process/process.php:198
+msgid "Display Process Count Number?"
+msgstr ""
+
+#: wpb-addons/process/process.php:207
+msgid "Process Count Text"
+msgstr ""
+
+#: wpb-addons/process/process.php:210
+msgid "Example - 01, 02, 03"
+msgstr ""
+
+#: wpb-addons/process/process.php:219
+msgid "Add Custom Link?"
+msgstr ""
+
+#: wpb-addons/process/process.php:228
+msgid "Custom Link"
+msgstr ""
+
+#: wpb-addons/process/process.php:231
+msgid "You can set custom link in heading text."
+msgstr ""
+
+#: wpb-addons/process/process.php:254 wpb-addons/testimonial/testimonial.php:119
+msgid "Set content alignment of testimonial info block."
+msgstr ""
+
+#: wpb-addons/process/process.php:267
+msgid "Choose Custom to create your own style."
+msgstr ""
+
+#: wpb-addons/process/process.php:288 wpb-addons/service/service.php:284
+msgid "On mouse hover service box background."
+msgstr ""
+
+#: wpb-addons/process/process.php:296
+msgid "Process Icon Color"
+msgstr ""
+
+#: wpb-addons/process/process.php:299
+msgid "This color will apply in process font awesome icon."
+msgstr ""
+
+#: wpb-addons/process/process.php:307
+msgid "Process Count Color"
+msgstr ""
+
+#: wpb-addons/process/process.php:310
+msgid "This color will apply in process count color."
+msgstr ""
+
+#: wpb-addons/process/process.php:318
+msgid "Process Title Color"
+msgstr ""
+
+#: wpb-addons/process/process.php:321
+msgid "This color will apply in process title."
+msgstr ""
+
+#: wpb-addons/process/process.php:331
+msgid "Process Info Color"
+msgstr ""
+
+#: wpb-addons/process/process.php:334
+msgid "This color will apply in process info."
+msgstr ""
+
+#: wpb-addons/service/service.php:10
+msgid "Grid Style 01 (Default)"
+msgstr ""
+
+#: wpb-addons/service/service.php:11
+msgid "Grid Style 02"
+msgstr ""
+
+#: wpb-addons/service/service.php:24
+msgid "Service Block"
+msgstr ""
+
+#: wpb-addons/service/service.php:25
+msgid "Add Multiple Service Blocks."
+msgstr ""
+
+#: wpb-addons/service/service.php:44
+msgid "Select service layout style."
+msgstr ""
+
+#: wpb-addons/service/service.php:105
+msgid "Add additional class for service layout."
+msgstr ""
+
+#: wpb-addons/service/service.php:119
+msgid "Select custom to create your own theme."
+msgstr ""
+
+#: wpb-addons/service/service.php:128
+msgid "This color will apply in navigation arrow and dot."
+msgstr ""
+
+#: wpb-addons/service/service.php:137
+msgid "Choose your animation style."
+msgstr ""
+
+#: wpb-addons/service/service.php:148
+msgid "Service Item"
+msgstr ""
+
+#: wpb-addons/service/service.php:149
+msgid "Add services item"
+msgstr ""
+
+#: wpb-addons/service/service.php:163
+msgid "Set the heading of services box. Example - Support Forum."
+msgstr ""
+
+#: wpb-addons/service/service.php:171
+msgid "Additional Title"
+msgstr ""
+
+#: wpb-addons/service/service.php:174
+msgid "Setup additional service text. Example - Starting@99"
+msgstr ""
+
+#: wpb-addons/service/service.php:180
+msgid "Service Icon"
+msgstr ""
+
+#: wpb-addons/service/service.php:195 wpb-addons/service/service.php:362
+msgid "Hide Service Icon?"
+msgstr ""
+
+#: wpb-addons/service/service.php:203 wpb-addons/service/service.php:340
+msgid "Service Image"
+msgstr ""
+
+#: wpb-addons/service/service.php:205 wpb-addons/service/service.php:342
+msgid "Add service box image. Recommended Size: 800 X 530 px."
+msgstr ""
+
+#: wpb-addons/service/service.php:212 wpb-addons/service/service.php:371
+msgid "Service Page URL"
+msgstr ""
+
+#: wpb-addons/service/service.php:215 wpb-addons/service/service.php:374
+msgid "You can set custom link for service."
+msgstr ""
+
+#: wpb-addons/service/service.php:228
+msgid "Set content alignment of service block."
+msgstr ""
+
+#: wpb-addons/service/service.php:241 wpb-addons/service/service.php:400
+msgid "Choose Custom to create your own service box."
+msgstr ""
+
+#: wpb-addons/service/service.php:251
+msgid "Regular service box background."
+msgstr ""
+
+#: wpb-addons/service/service.php:259
+msgid "Icon/Additional Title Background"
+msgstr ""
+
+#: wpb-addons/service/service.php:262 wpb-addons/service/service.php:273
+msgid "Custom Additional Icon/Title background."
+msgstr ""
+
+#: wpb-addons/service/service.php:270
+msgid "Icon/Additional Title Color"
+msgstr ""
+
+#: wpb-addons/service/service.php:308
+msgid "Single Service"
+msgstr ""
+
+#: wpb-addons/service/service.php:309
+msgid "Add Single Service Block In Page."
+msgstr ""
+
+#: wpb-addons/service/service.php:348
+msgid "Sevice Icon"
+msgstr ""
+
+#: wpb-addons/service/service.php:386
+msgid "Add additional class of service box."
+msgstr ""
+
+#: wpb-addons/service/service.php:410
+msgid "This color will apply in service navigation button."
+msgstr ""
+
+#: wpb-addons/slider/slider.php:11
+msgid "Slider Layout 01"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:21
+msgid "Slider Block"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:22
+msgid "Place Slider In Page."
+msgstr ""
+
+#: wpb-addons/slider/slider.php:39
+msgid "Select slider layout style."
+msgstr ""
+
+#: wpb-addons/slider/slider.php:54
+msgid "Hide Slider Navigation Arrow?"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:64
+msgid "Disable Slider Image Zoom Effect?"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:74
+msgid "Hide Slider Navigation Dots?"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:84
+msgid "Navigation Button Theme"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:94
+msgid "Navigation Background"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:97
+msgid "Set navigation background."
+msgstr ""
+
+#: wpb-addons/slider/slider.php:105
+msgid "Navigation Icon Color"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:108
+msgid "Set navigation icon color."
+msgstr ""
+
+#: wpb-addons/slider/slider.php:115
+msgid "Left Navigation Icon"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:130
+msgid "Right Navigation Icon"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:149
+msgid "Slider Item"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:150
+msgid "Add Slider Item."
+msgstr ""
+
+#: wpb-addons/slider/slider.php:159
+msgid "Slider Title Text"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:161
+msgid "You can add html and custom css code as slider title text."
+msgstr ""
+
+#: wpb-addons/slider/slider.php:168
+msgid "Additional Slider Title Class"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:171 wpb-addons/slider/slider.php:211
+msgid "Example: theme-custom-no-text-shadow"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:177
+msgid "Content Animation in Style"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:187
+msgid "Content Animation Out Style"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:198
+msgid "Slider Sub Title"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:208
+msgid "Additional Slider Sub Title Class"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:217
+msgid "Hide Slider Sub Title"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:240
+msgid "Slider Background Image"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:293
+msgid "Slider Sub Title Text Color"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:334
+msgid "Additional Button#1 Class"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:337 wpb-addons/slider/slider.php:447
+msgid "Example: btn-theme-invert, btn-theme-white, btn-square, btn-small"
+msgstr ""
+
+#: wpb-addons/slider/slider.php:444
+msgid "Additional Button#2 Class"
+msgstr ""
+
+#: wpb-addons/social_link/social_link.php:10
+msgid "Social Link"
+msgstr ""
+
+#: wpb-addons/social_link/social_link.php:11
+msgid "Place Social Info In Page."
+msgstr ""
+
+#: wpb-addons/social_link/social_link.php:22 wpb-addons/team/team.php:275
+msgid "Twitter"
+msgstr ""
+
+#: wpb-addons/social_link/social_link.php:33 wpb-addons/team/team.php:268
+msgid "Facebook"
+msgstr ""
+
+#: wpb-addons/social_link/social_link.php:44 wpb-addons/team/team.php:282
+msgid "Google Plus"
+msgstr ""
+
+#: wpb-addons/social_link/social_link.php:55
+msgid "Pinterest"
+msgstr ""
+
+#: wpb-addons/social_link/social_link.php:70
+msgid "Add additional class for social link layout."
+msgstr ""
+
+#: wpb-addons/team/team.php:11
+msgid "Layout 01 (Social Icon Bottom)"
+msgstr ""
+
+#: wpb-addons/team/team.php:12
+msgid "Layout 02 (Social Icon Left)"
+msgstr ""
+
+#: wpb-addons/team/team.php:17
+msgid "Team Block"
+msgstr ""
+
+#: wpb-addons/team/team.php:18
+msgid "Add Team Members In Page."
+msgstr ""
+
+#: wpb-addons/team/team.php:34
+msgid "Team Layout"
+msgstr ""
+
+#: wpb-addons/team/team.php:37
+msgid "Select team layout style."
+msgstr ""
+
+#: wpb-addons/team/team.php:111
+msgid "Social Icon Style"
+msgstr ""
+
+#: wpb-addons/team/team.php:114
+msgid "Rounded"
+msgstr ""
+
+#: wpb-addons/team/team.php:115
+msgid "Square"
+msgstr ""
+
+#: wpb-addons/team/team.php:127
+msgid "This color will apply on soical icon background and navigation button."
+msgstr ""
+
+#: wpb-addons/team/team.php:135
+msgid "Social Icon Color"
+msgstr ""
+
+#: wpb-addons/team/team.php:138
+msgid "This color will apply on soical icon color."
+msgstr ""
+
+#: wpb-addons/team/team.php:146
+msgid "Team Name Color"
+msgstr ""
+
+#: wpb-addons/team/team.php:149
+msgid "This color will apply on team member name text."
+msgstr ""
+
+#: wpb-addons/team/team.php:157
+msgid "Team Designation Color"
+msgstr ""
+
+#: wpb-addons/team/team.php:160
+msgid "This color will apply on team member designation text."
+msgstr ""
+
+#: wpb-addons/team/team.php:171 wpb-addons/team/team.php:240
+msgid "Add additional class of team box."
+msgstr ""
+
+#: wpb-addons/team/team.php:190
+msgid "Team Item"
+msgstr ""
+
+#: wpb-addons/team/team.php:200
+msgid "Member Name"
+msgstr ""
+
+#: wpb-addons/team/team.php:209
+msgid "Member Info"
+msgstr ""
+
+#: wpb-addons/team/team.php:217
+msgid "Team Image"
+msgstr ""
+
+#: wpb-addons/team/team.php:225
+msgid "Custom Profile Link"
+msgstr ""
+
+#: wpb-addons/team/team.php:228
+msgid "Add custom team profile link."
+msgstr ""
+
+#: wpb-addons/team/team.php:250
+msgid "Set content alignment of team info block."
+msgstr ""
+
+#: wpb-addons/team/team.php:256
+msgid "Disable Social Link?"
+msgstr ""
+
+#: wpb-addons/team/team.php:263
+msgid "Hide social link button from team block."
+msgstr ""
+
+#: wpb-addons/team/team.php:289
+msgid "Linkedin"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:12
+msgid "Simple Layout (Without Carousel)"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:16
+msgid "Large Icon"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:17
+msgid "Small Icon"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:22
+msgid "Testimonials"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:23
+msgid "Place Testimonials In Page."
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:38
+msgid "Testimonial Layout"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:42
+#: wpb-addons/testimonial/testimonial.php:54
+msgid "Select Testimonial Layout Style."
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:59
+msgid "Item Per Row"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:105
+msgid "Add additional class of testimonial box."
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:140
+msgid "This color will apply in quote icon, navigation arrow and dot."
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:148
+msgid "Testimonial Background"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:151
+msgid "This color will apply in testimonial container background."
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:159
+msgid "Testimonial Text Color"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:162
+msgid "This color will apply in testimonial text color."
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:170
+msgid "Testimonial Designation Color"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:173
+msgid "This color will apply in testimonial designation color."
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:183
+msgid "Testimonial Item"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:195
+msgid "Testimonial Text"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:202
+msgid "User Name"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:208
+msgid "User Designation"
+msgstr ""
+
+#: wpb-addons/testimonial/testimonial.php:215
+msgid "User Image"
+msgstr ""
+
+#: wpb-addons/video/video.php:10
+msgid "Layout 01 (Video Link Option) "
+msgstr ""
+
+#: wpb-addons/video/video.php:14
+msgid "Video Box"
+msgstr ""
+
+#: wpb-addons/video/video.php:15
+msgid "Display Video Box In Page."
+msgstr ""
+
+#: wpb-addons/video/video.php:35
+msgid "Video Background Image"
+msgstr ""
+
+#: wpb-addons/video/video.php:44
+msgid "Video Icon"
+msgstr ""
+
+#: wpb-addons/video/video.php:59
+msgid "Video Link"
+msgstr ""
+
+#: wpb-addons/video/video.php:62
+msgid "Video CTA Link Example: https://www.youtube.com/watch?v=nrJtHemSPW4"
+msgstr ""
+
+#: wpb-addons/video/video.php:74
+msgid "Add additional class of video box."
+msgstr ""
+
+#: wpb-addons/video/video.php:82
+msgid "Button Design"
+msgstr ""
+
+#: wpb-addons/video/video.php:85
+msgid "Rouned Icon"
+msgstr ""
+
+#: wpb-addons/video/video.php:86
+msgid "Square Icon"
+msgstr ""
+
+#: wpb-addons/video/video.php:88
+msgid "Set video button design."
+msgstr ""
+
+#: wpb-addons/video/video.php:95
+msgid "Button Alignment"
+msgstr ""
+
+#: wpb-addons/video/video.php:99
+msgid "Bottom Left"
+msgstr ""
+
+#: wpb-addons/video/video.php:100
+msgid "Bottom Right"
+msgstr ""
+
+#: wpb-addons/video/video.php:102
+msgid "Set video button position."
+msgstr ""
+
+#: wpb-addons/video/video.php:125
+msgid "This color will apply in Icon color button."
+msgstr ""
