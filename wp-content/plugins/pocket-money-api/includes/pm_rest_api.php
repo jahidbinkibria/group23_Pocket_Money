@@ -154,7 +154,7 @@ function pm_custom_rest_api()
   function pmAllJobs($data)
   {
 
-    // http://localhost/gamification/wp-json/pmapi/v1/search
+    // http://localhost/gamification/wp-json/pmapi/v1/jobs
     $args = [
       'post_type' => 'jobs',
       'posts_per_page' => -1,
@@ -180,13 +180,16 @@ function pm_custom_rest_api()
 
       $price = get_field('price', $post_id);
 
+      $duration = get_field('duration', $post_id) ?: 0;
+
       array_push($jobs_data, array(
         'id' => $post_id,
         'title' => get_the_title(),
         'excerpt' => get_the_excerpt(),
         'category' => $category,
         'price' => $price,
-        'date' => get_the_date()
+        'date' => get_the_date(),
+        'duration' => $duration
       ));
     }
 
