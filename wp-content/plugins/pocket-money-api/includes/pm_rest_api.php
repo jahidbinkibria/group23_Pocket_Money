@@ -18,6 +18,7 @@ function pm_custom_rest_api()
     'callback' => 'pmJobSearch'
   ));
 
+  // url: /pmapi/v1/create
   //Create A New Data
   register_rest_route('pmapi/v1', 'create', array(
     'methods' => 'POST',
@@ -213,7 +214,8 @@ function pm_custom_rest_api()
 
       $post_data = array(
         'post_type' => 'jobs',
-        'post_title' => 'Hello',
+        'post_title' => sanitize_text_field($data->get_param('taskTitle')),
+        'post_content' => sanitize_text_field($data->get_param('taskDetails')),
         // 'post_title' => "gg_spin_" . sanitize_text_field($data->get_param('game_id')),
         'post_status' => 'publish'
       );
