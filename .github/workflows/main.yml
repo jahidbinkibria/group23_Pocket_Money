@@ -18,7 +18,4 @@ jobs:
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
           server-dir: /
-          dry-run: true
-          exclude:
-            - wp-includes/**
-            - wp-admin/**
+          exclude: "[.git/**, /wp-includes/**]"
