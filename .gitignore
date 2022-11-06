@@ -11,3 +11,5 @@ wp-content/plugins/pocket-money-api/node_modules
 !wp-content/themes
 wp-content/themes/*
 !wp-content/themes/bwl-starter-theme
+
+*.wpress
