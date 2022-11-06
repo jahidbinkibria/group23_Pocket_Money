@@ -18,4 +18,4 @@ jobs:
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
           server-dir: /
-          exclude: "[.git/**, /wp-includes/**, /test/**]"
+          exclude: "[.git/**, /wp-includes/**, ./test/**]"
