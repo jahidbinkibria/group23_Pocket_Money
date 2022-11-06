@@ -34,20 +34,23 @@ function pm_custom_rest_api()
   function pmJobSearch($data)
   {
 
+    // wp-json/pmapi/v1/search?s=baby&cat=11
 
-    echo "<pre>";
-    print_r($data);
-    echo "</pre>";
+    // echo "<pre>";
+    // print_r($data['s']);
+    // print_r($data['cat']);
+    // echo "</pre>";
 
-    die();
+    // die();
 
     // http://localhost/gamification/wp-json/pmapi/v1/search
     $args = [
       'post_type' => 'jobs',
       'posts_per_page' => -1,
-      'orderby' => 'date',
-      'order' => 'desc',
-      // 's' => sanitize_text_field($data['term'])
+      'orderby' => 'title',
+      'order' => 'ASC',
+      'posts_per_page' => 5,
+      's' => sanitize_text_field($data['s'])
       // 's' => '12'
     ];
 
@@ -129,9 +132,9 @@ function pm_custom_rest_api()
       array_push($jobs_data, array(
         'id' => $post_id,
         'title' => get_the_title(),
-        'excerpt' => get_the_excerpt(),
-        'category' => $category,
-        'price' => $price,
+        // 'excerpt' => get_the_excerpt(),
+        // 'category' => $category,
+        // 'price' => $price,
 
 
         // 'author' => $author,
@@ -155,20 +158,29 @@ function pm_custom_rest_api()
   function pmAllJobs($data)
   {
 
+    $singlePost = $data['p_id'] ?? false; // if data['p_id'] value set then we are going to use that value other wise value is 0.
+
     // http://localhost/gamification/wp-json/pmapi/v1/jobs
     $args = [
+      'post_status' => 'publish',
       'post_type' => 'jobs',
-      'posts_per_page' => -1,
-      'orderby' => 'date',
-      'order' => 'desc',
+      'posts_per_page' => $data['limit'] ?: 3,
+      'paged' => $data['page'] ?: 1,
+      'orderby' => $data['orderby'] ?: 'date',
+      'order' => $data['order'] ?: 'DESC'
       // 's' => sanitize_text_field($data['term'])
       // 's' => '12'
     ];
 
+    if ($singlePost) {
+      $args['p'] = $data['p_id'];
+    }
+
     $jobs = new WP_Query($args);
     $result = $jobs;
 
-    $jobs_data = [];
+    $jobs_data['max_pages'] = $jobs->max_num_pages;
+    $jobs_data['job_data'] = [];
 
     while ($result->have_posts()) {
 
@@ -183,16 +195,29 @@ function pm_custom_rest_api()
 
       $duration = get_field('duration', $post_id) ?: 0;
 
-      array_push($jobs_data, array(
+      $jobInfo = [
         'id' => $post_id,
         'title' => get_the_title(),
         'excerpt' => get_the_excerpt(),
-        'category' => $category,
-        'price' => $price,
-        'date' => get_the_date(),
         'duration' => $duration
-      ));
+      ];
+
+
+      if ($singlePost) {
+
+        $jobInfo['excerpt'] = get_the_content();
+        $jobInfo['category'] = $category;
+        $jobInfo['price'] = $price;
+        $jobInfo['date'] = get_the_date();
+      }
+
+      array_push($jobs_data['job_data'], $jobInfo);
     }
+
+    // echo "<pre>";
+    // print_r($result);
+    // echo "</pre>";
+
 
 
     return $jobs_data;
