@@ -52,12 +52,12 @@ define("PM_API_BORDER_COLOR", "#CCCCCC");
 
 
 
-require_once(plugin_dir_path(__FILE__) . 'public/class-pm-api.php');
-require_once(plugin_dir_path(__FILE__) . 'includes/pm_rest_api.php');
+// require_once(plugin_dir_path(__FILE__) . 'public/class-pm-api.php');
+// require_once(plugin_dir_path(__FILE__) . 'includes/pm_rest_api.php');
 
 
 
-add_action('plugins_loaded', array('PM_API_Addon', 'get_instance'));
+// add_action('plugins_loaded', array('PM_API_Addon', 'get_instance'));
 
 if (is_admin()) {
 

@@ -13,7 +13,9 @@ class Init
   {
 
     return [
-      Base\Enqueue::class
+      Base\Enqueue::class,
+      Base\Language::class,
+      Pages\PmApi::class
     ];
   }
 

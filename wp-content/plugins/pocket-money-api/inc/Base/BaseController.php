@@ -11,6 +11,7 @@ class BaseController
 
 {
 
+  public $api_version;
   public $plugin_version;
   public $plugin_slug;
   public $plugin_path; // plugin relative url. (use for template or files.)
@@ -21,6 +22,8 @@ class BaseController
 
   public function __construct()
   {
+
+    $this->api_version = "pmapi/v1";
     $this->plugin_version = '1.0.1';
     $this->plugin_slug = "pmapi";
     $this->plugin_path = plugin_dir_path(dirname(__FILE__, 2));

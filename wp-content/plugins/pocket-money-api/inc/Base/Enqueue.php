@@ -23,8 +23,7 @@ class Enqueue extends BaseController
   {
     //only write the style file name.
     return [
-      'app',
-      'app-no',
+      'app'
     ];
   }
 
@@ -34,13 +33,21 @@ class Enqueue extends BaseController
     // key value associative array contains the dependencies. 
     // seperate dependencies by comma(,)
     return [
-      'app' => "",
-      'app-no' => ""
+      'app' => ""
     ];
   }
 
   public function enqueueScripts()
   {
+
+    // Localize scripts.
+    // Mostly use for the ajax request.
+    // pmapi-app-script-js
+
+
+    // wp_localize_script($this->plugin_slug . '-plugin-script', $this->plugin_slug . 'AdditionalData', array(
+    //   $this->plugin_slug . '_app_root' => get_site_url()
+    // ));
 
     // App Styles.
 
@@ -58,6 +65,12 @@ class Enqueue extends BaseController
         wp_enqueue_script($this->plugin_slug . '-' . "$script-script", $this->plugin_url . "assets/scripts/$script.js", array($dependency), $this->plugin_version, TRUE);
       }
     }
+
+    // Localize scripts.
+    // It hooks with the first script.
+    wp_localize_script($this->plugin_slug . '-app-script', $this->plugin_slug . 'AdditionalData', array(
+      $this->plugin_slug . '_app_root' => get_site_url()
+    ));
   }
 
   public function adminEnqueueScripts()
