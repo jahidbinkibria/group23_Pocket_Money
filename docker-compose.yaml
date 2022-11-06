@@ -40,6 +40,7 @@ services:
       WORDPRESS_DB_USER: user_pocketmoney
       WORDPRESS_DB_PASSWORD: pocketmoney
       WORDPRESS_DB_NAME: db_pocketmoney
+      WORDPRESS_DEBUG: true
     volumes: ["./:/var/www/html"]
     networks:
       - wpsite

@@ -1,0 +1,18 @@
+{
+  "name": "xenioushk/api",
+  "description": "Custom API for pocket money application.",
+  "type": "project",
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Inc\\": "inc/"
+    }
+  },
+  "authors": [
+    {
+      "name": "Mahbub"
+    }
+  ],
+  "minimum-stability": "stable",
+  "require": {}
+}

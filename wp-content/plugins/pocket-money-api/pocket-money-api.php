@@ -1,18 +1,38 @@
 <?php
+
+/**
+ * @package PMApiPlugin
+ */
+
+use Inc\Init;
+
 /*
   Plugin Name: Pocket Money API Addon
   Version: 1.0.0
   Description: Custom Pocket Money API Addon
   Author: Group 23
   Author URI:  https://github.com/xenioushk/
-  Text Domain: gg_spin
+  Text Domain: pmapi
   Domain Path: /languages/
  */
 
-// If this file is called directly, abort.
-if (!defined('WPINC')) {
-    die;
+// security check.
+defined('ABSPATH') or die("Unauthorized access");
+
+if (file_exists(dirname(__FILE__) . '/vendor/autoload.php')) {
+    require_once dirname(__FILE__) . '/vendor/autoload.php';
 }
+
+if (class_exists('Inc\\Init')) {
+    Init::registerServices();
+}
+
+use Inc\Base\Activate;
+use Inc\Base\Deactivate;
+
+register_activation_hook(__FILE__, [Activate::class, 'activate']);
+register_activation_hook(__FILE__, [Deactivate::class, 'dectivate']);
+
 
 // End of plugin activation check status.
 
@@ -32,11 +52,10 @@ define("PM_API_BORDER_COLOR", "#CCCCCC");
 
 
 
-require_once( plugin_dir_path(__FILE__) . 'public/class-pm-api.php' );
-require_once( plugin_dir_path(__FILE__) . 'includes/pm_rest_api.php' );
+require_once(plugin_dir_path(__FILE__) . 'public/class-pm-api.php');
+require_once(plugin_dir_path(__FILE__) . 'includes/pm_rest_api.php');
 
-register_activation_hook(__FILE__, array('PM_API_Addon', 'activate'));
-register_deactivation_hook(__FILE__, array('PM_API_Addon', 'deactivate'));
+
 
 add_action('plugins_loaded', array('PM_API_Addon', 'get_instance'));
 
@@ -45,5 +64,5 @@ if (is_admin()) {
     // require_once( plugin_dir_path(__FILE__) . 'admin/gg-spin-game-report.php' );
     // require_once( plugin_dir_path(__FILE__) . 'admin/class-gg-wpb-admin.php' );
     // add_action('plugins_loaded', array('PM_API_Addon_Admin', 'get_instance'));
-    
+
 }
