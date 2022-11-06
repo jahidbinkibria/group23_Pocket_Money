@@ -189,6 +189,25 @@ function JobCreate(props) {
                       sm:text-sm"
                     ></textarea>
                   </div>
+
+                  {/* Category of the Task */}
+                  <div className="col-span-8">
+                    {/* <FormLabel id="taskCategory" title="Task Category" /> */}
+                    <select
+                      name="taskCategory"
+                      id="taskCategory"
+                      // value={taskCategory}
+                      // onChange={(e) => setTaskCategory(e.target.value)}
+                      className="p-2 mt-2 block w-full rounded border-2 border-gray-500 focus:border-2"
+                    >
+                      <option>Cleaning</option>
+                      <option>Repairing/Fixing</option>
+                      <option>Assembly/Disassembly</option>
+                      <option>Moving/Delivering</option>
+                      <option>Pet-Walking/Baby-Sitting/Caregiving</option>
+                    </select>
+                  </div>
+
                   {/* Task Duration */}
                   <div className="col-span-6">
                     <label
