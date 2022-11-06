@@ -16,7 +16,7 @@ class RestApiCallbacks extends BaseController
 
   // Job Search CallBack.
 
-  function pmJobSearch($data)
+  public function pmJobSearch($data)
   {
 
     // wp-json/pmapi/v1/search?s=baby&cat=11
@@ -142,7 +142,7 @@ class RestApiCallbacks extends BaseController
 
   // All Jobs.
 
-  function pmAllJobs($data)
+  public function pmAllJobs($data)
   {
 
     $singlePost = $data['p_id'] ?? false; // if data['p_id'] value set then we are going to use that value other wise value is 0.
@@ -212,7 +212,7 @@ class RestApiCallbacks extends BaseController
 
   // Callbacks.
 
-  function pmCreateJob($data)
+  public function pmCreateJob($data)
   {
 
     // echo $_SERVER['HTTP_ORIGIN'];
