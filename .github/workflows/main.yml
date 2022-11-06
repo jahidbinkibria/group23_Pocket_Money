@@ -18,3 +18,12 @@ jobs:
           username: ${{ secrets.ftp_username }}
           password: ${{ secrets.ftp_password }}
           server-dir: /
+          exclude: |
+          **/.git*
+          **/.git*/**
+          **/wp-admin/**
+          **/wp-includes/**
+          **/wp-content/plugins/acf-to-rest-api**
+          **/wp-content/plugins/advanced-custom-fields**
+          **/wp-content/plugins/all-in-one-wp-migration**
+          **/wp-content/plugins/custom-post-type-ui**
