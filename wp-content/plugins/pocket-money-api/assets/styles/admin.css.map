@@ -1,0 +1,1 @@
+{"version":3,"file":"styles/admin.css","mappings":";;;AACA;EACE,gBAFQ;EAGR,qBAHQ;AAGV,C","sources":["webpack://pocket-money-api/./src/admin/styles/admin.scss"],"sourcesContent":["$mycolor: \"#fafafa\";\r\n.test-my-admin {\r\n  color: $mycolor;\r\n  background: $mycolor;\r\n}\r\n"],"names":[],"sourceRoot":""}

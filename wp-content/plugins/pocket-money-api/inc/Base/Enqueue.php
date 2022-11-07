@@ -23,7 +23,7 @@ class Enqueue extends BaseController
   {
     //only write the style file name.
     return [
-      'app'
+      'frontend'
     ];
   }
 
@@ -33,7 +33,7 @@ class Enqueue extends BaseController
     // key value associative array contains the dependencies. 
     // seperate dependencies by comma(,)
     return [
-      'app' => ""
+      'frontend' => ""
     ];
   }
 
@@ -75,7 +75,7 @@ class Enqueue extends BaseController
 
   public function adminEnqueueScripts()
   {
-    wp_enqueue_style($this->plugin_slug . '-app-style', $this->plugin_url . 'assets/styles/app.css', [], $this->plugin_version);
-    wp_enqueue_script($this->plugin_slug . '-app-script', $this->plugin_url . 'assets/scripts/app.js', array('jquery'), $this->plugin_version, TRUE);
+    wp_enqueue_style($this->plugin_slug . '-app-style', $this->plugin_url . 'assets/styles/admin.css', [], $this->plugin_version);
+    wp_enqueue_script($this->plugin_slug . '-app-script', $this->plugin_url . 'assets/scripts/admin.js', array('jquery'), $this->plugin_version, TRUE);
   }
 }
