@@ -1,6 +1,5 @@
 <?php
 
-
 /**
  * @package PMApiPlugin
  */
@@ -42,7 +41,8 @@ class RestApi extends BaseController
     foreach ($this->api_settings as $api) {
       register_rest_route($this->api_version, $api['tag'], array(
         'methods' => $api['method'],
-        'callback' => $api['callback']
+        'callback' => $api['callback'],
+        'permission_callback' => '__return_true'
       ));
     }
   }
