@@ -21,6 +21,7 @@ class RestApi extends BaseController
   {
     if (!empty($this->api_settings)) {
       add_action('rest_api_init', [$this, 'addCustomRestApi']);
+      add_action('rest_pre_serve_request', [$this, 'addRestApiAuthorization']);
     }
   }
 
@@ -30,23 +31,19 @@ class RestApi extends BaseController
     return $this;
   }
 
+  public function addRestApiAuthorization()
+  {
+    header('Access-Control-Allow-Headers: Authorization, Content-Type, X-WP-Wpml-Language', true);
+    header("Access-Control-Allow-Origin: *");
+  }
+
   public function addCustomRestApi()
   {
-
-    add_action('rest_pre_serve_request', function () {
-      header('Access-Control-Allow-Headers: Authorization, Content-Type, X-WP-Wpml-Language', true);
-      header("Access-Control-Allow-Origin: *");
-    });
-
-    // die();
-    //  tag, callback_args
     foreach ($this->api_settings as $api) {
-
-      register_rest_route($this->api_version, $api['tag'], $api['callback_args']);
-      // register_rest_route('pmapi/v1', 'search', array(
-      //   'methods' => \WP_REST_SERVER::READABLE,
-      //   'callback' => 'pmJobSearch'
-      // ));
+      register_rest_route($this->api_version, $api['tag'], array(
+        'methods' => $api['method'],
+        'callback' => $api['callback']
+      ));
     }
   }
 }

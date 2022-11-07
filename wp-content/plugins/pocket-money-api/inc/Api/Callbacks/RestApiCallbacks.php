@@ -28,7 +28,7 @@ class RestApiCallbacks extends BaseController
 
     // die();
 
-    // http://localhost/gamification/wp-json/pmapi/v1/search
+    // http://yourdomain.com/wp-json/pmapi/v1/search
     $args = [
       'post_type' => 'jobs',
       'posts_per_page' => -1,
@@ -90,10 +90,10 @@ class RestApiCallbacks extends BaseController
 
       $post_id = get_the_ID();
 
-      $category = get_the_terms($post_id, 'category');
-      $category = join(', ', wp_list_pluck($category, 'name'));
+      // $category = get_the_terms($post_id, 'category');
+      // $category = join(', ', wp_list_pluck($category, 'name'));
 
-      $price = get_field('price', $post_id);
+      // $price = get_field('price', $post_id);
 
       // $tax_author = pm_tax_term_as_string( get_the_terms( $post_id, GG_PUB_TAX_AUTHOR, ARRAY_A ) );                    
 
@@ -147,7 +147,7 @@ class RestApiCallbacks extends BaseController
 
     $singlePost = $data['p_id'] ?? false; // if data['p_id'] value set then we are going to use that value other wise value is 0.
 
-    // http://localhost/gamification/wp-json/pmapi/v1/jobs
+    // http://yourdomain.com/wp-json/pmapi/v1/jobs
     $args = [
       'post_status' => 'publish',
       'post_type' => 'jobs',
