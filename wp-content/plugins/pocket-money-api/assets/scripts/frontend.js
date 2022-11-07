@@ -1,0 +1,1 @@
+(()=>{"use strict";jQuery,new class{constructor(){this.buttons=document.getElementsByClassName("wp-block-button__link")}events(){this.buttons.on("click",this.buttonAction.bind(this))}buttonAction(){alert(this.target.value)}}})();
