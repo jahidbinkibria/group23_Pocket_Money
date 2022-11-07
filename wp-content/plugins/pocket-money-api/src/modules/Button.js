@@ -2,7 +2,6 @@ class Button {
   //1. INITALIZATION
   constructor() {
     this.buttons = document.getElementsByClassName("wp-block-button__link")
-    console.log("hello")
   }
 
   //2. EVENTS.

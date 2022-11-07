@@ -13,9 +13,10 @@ class Init
   {
 
     return [
+      Pages\PmApi::class,
       Base\Enqueue::class,
       Base\Language::class,
-      Pages\PmApi::class,
+      Base\QuerySupport::class,
       Pages\CaseStudyCpt::class,
       Shortcodes\CaseStudy::class,
     ];

@@ -21,8 +21,9 @@ class CaseStudyCpt extends BaseController
 
   public function register()
   {
-
+    // https://severalnines.com/case-studies/?cat=hosting&tax=case_study_industry
     // Single Post Slug: http://localhost:9000/?case-study=test-case-study
+    // Taxonomy Post Slug: http://localhost:9000/?case-study=test-case-study
     // $this->callbacks = new RestApiCallbacks();
     $this->case_study_cpt = new CptApi();
     $this->cpt_settings = [

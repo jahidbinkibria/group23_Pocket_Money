@@ -9,7 +9,7 @@ namespace Inc\Shortcodes;
 
 use Inc\Api\ShortcodeApi;
 use \Inc\Base\BaseController;
-use \Inc\Api\Callbacks\ShortcodeCallbacks;
+use \Inc\Api\Callbacks\CaseStudyShortcodes;
 
 class CaseStudy extends BaseController
 {
@@ -22,7 +22,7 @@ class CaseStudy extends BaseController
   {
 
     $this->shortcodes = new ShortcodeApi();
-    $this->callbacks = new ShortcodeCallbacks();
+    $this->callbacks = new CaseStudyShortcodes();
 
     $shortcodes = [
       [
