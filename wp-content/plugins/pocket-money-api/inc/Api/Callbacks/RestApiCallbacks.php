@@ -175,26 +175,38 @@ class RestApiCallbacks extends BaseController
 
       $post_id = get_the_ID();
 
-      $category = get_the_terms($post_id, 'category');
-      $category = join(', ', wp_list_pluck($category, 'name'));
-
-      $price = get_field('price', $post_id);
 
       $duration = get_field('duration', $post_id) ?: 0;
 
       $jobInfo = [
         'id' => $post_id,
-        'title' => get_the_title(),
+        'title' => trim(get_the_title()),
         'excerpt' => get_the_excerpt(),
         'duration' => $duration
       ];
 
-
       if ($singlePost) {
+
+        $category = get_the_terms($post_id, 'category');
+        $category = join(', ', wp_list_pluck($category, 'name'));
+
+        $first_name = get_field('first_name', $post_id);
+        $last_name = get_field('last_name', $post_id);
+        $email = get_field('email', $post_id);
+        $contact = get_field('contact', $post_id);
+        $address = get_field('address', $post_id);
+        $city = get_field('city', $post_id);
+        $price = get_field('price', $post_id);
 
         $jobInfo['excerpt'] = get_the_content();
         $jobInfo['category'] = $category;
-        $jobInfo['price'] = $price;
+        $jobInfo['first_name'] = trim($first_name);
+        $jobInfo['last_name'] = trim($last_name);
+        $jobInfo['email'] = trim($email);
+        $jobInfo['contact'] = trim($contact);
+        $jobInfo['address'] = trim($address);
+        $jobInfo['city'] = $city;
+        $jobInfo['price'] = trim($price);
         $jobInfo['date'] = get_the_date();
       }
 
