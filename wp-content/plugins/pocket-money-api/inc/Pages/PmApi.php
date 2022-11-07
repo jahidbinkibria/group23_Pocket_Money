@@ -25,24 +25,18 @@ class PmApi extends BaseController
     $apis = [
       [
         'tag' => 'search',
-        'callback_args' => array(
-          'methods' => \WP_REST_SERVER::READABLE,
-          'callback' => [$this->callbacks, 'pmJobSearch']
-        )
+        'method' => \WP_REST_SERVER::READABLE,
+        'callback' => [$this->callbacks, 'pmJobSearch']
       ],
       [
         'tag' => 'create',
-        'callback_args' => array(
-          'methods' => 'POST',
-          'callback' => [$this->callbacks, 'pmCreateJob']
-        )
+        'method' => \WP_REST_SERVER::CREATABLE,
+        'callback' => [$this->callbacks, 'pmCreateJob']
       ],
       [
         'tag' => 'jobs',
-        'callback_args' => array(
-          'methods' => \WP_REST_SERVER::READABLE,
-          'callback' => [$this->callbacks, 'pmAllJobs']
-        )
+        'method' => \WP_REST_SERVER::READABLE,
+        'callback' => [$this->callbacks, 'pmAllJobs']
       ]
     ];
 
