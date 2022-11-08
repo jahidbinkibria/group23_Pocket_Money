@@ -62,7 +62,7 @@ class Enqueue extends BaseController
     if (!empty($appScripts = $this->getAppScripts())) {
       foreach ($appScripts as $script => $dependency) {
         $dependency = (!empty($dependency)) ? $this->default_scripts_dependency . ',' . $dependency : $this->default_scripts_dependency;
-        wp_enqueue_script($this->plugin_slug . '-' . "$script-script", $this->plugin_url . "assets/scripts/$script.js", array($dependency), $this->plugin_version, TRUE);
+        wp_enqueue_script($this->plugin_slug . '-' . "$script-script", $this->plugin_url . "assets/scripts/$script.js", array($dependency), '', TRUE);
       }
     }
 
