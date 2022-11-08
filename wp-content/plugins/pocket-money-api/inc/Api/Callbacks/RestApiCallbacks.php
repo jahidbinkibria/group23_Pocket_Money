@@ -264,6 +264,7 @@ class RestApiCallbacks extends BaseController
       if (!is_wp_error($new_post_id)) {
         // $output['data'] = get_post( $new_post_id ) ;	
 
+
         update_field('first_name', sanitize_text_field($data->get_param('firstName')), $new_post_id);
         update_field('last_name', sanitize_text_field($data->get_param('lastName')), $new_post_id);
         update_field('contact', sanitize_text_field($data->get_param('contact')), $new_post_id);
@@ -273,6 +274,7 @@ class RestApiCallbacks extends BaseController
         update_field('zip_code', sanitize_text_field($data->get_param('zipCode')), $new_post_id);
         update_field('duration', sanitize_text_field($data->get_param('taskDuration')), $new_post_id);
         update_field('price', sanitize_text_field($data->get_param('taskPrice')), $new_post_id);
+
 
         // set category.
 
