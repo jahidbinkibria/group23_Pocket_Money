@@ -234,7 +234,7 @@ class RestApiCallbacks extends BaseController
       'status' => 0
     );
 
-    $request_address = 'http://' . $_SERVER['SERVER_NAME'] . ':9000';
+    $request_address = ($_SERVER['SERVER_NAME'] == "localhost") ?  'http://' . $_SERVER['SERVER_NAME'] . ':9000' :  $_SERVER['HTTP_ORIGIN'];
 
     if (isset($request_address) && in_array($request_address, $allowed)) {
 
@@ -264,15 +264,17 @@ class RestApiCallbacks extends BaseController
       if (!is_wp_error($new_post_id)) {
         // $output['data'] = get_post( $new_post_id ) ;	
 
-        update_field('first_name', sanitize_text_field($data->get_param('firstName')), [$new_post_id]);
-        update_field('last_name', sanitize_text_field($data->get_param('lastName')), [$new_post_id]);
-        update_field('contact', sanitize_text_field($data->get_param('contact')), [$new_post_id]);
-        update_field('email', sanitize_text_field($data->get_param('email')), [$new_post_id]);
-        update_field('address', sanitize_text_field($data->get_param('address')), [$new_post_id]);
-        update_field('city', sanitize_text_field($data->get_param('city')), [$new_post_id]);
-        update_field('zip_code', sanitize_text_field($data->get_param('zipCode')), [$new_post_id]);
-        update_field('duration', sanitize_text_field($data->get_param('taskDuration')), [$new_post_id]);
-        update_field('price', sanitize_text_field($data->get_param('taskPrice')), [$new_post_id]);
+
+        update_field('first_name', sanitize_text_field($data->get_param('firstName')), $new_post_id);
+        update_field('last_name', sanitize_text_field($data->get_param('lastName')), $new_post_id);
+        update_field('contact', sanitize_text_field($data->get_param('contact')), $new_post_id);
+        update_field('email', sanitize_text_field($data->get_param('email')), $new_post_id);
+        update_field('address', sanitize_text_field($data->get_param('address')), $new_post_id);
+        update_field('city', sanitize_text_field($data->get_param('city')), $new_post_id);
+        update_field('zip_code', sanitize_text_field($data->get_param('zipCode')), $new_post_id);
+        update_field('duration', sanitize_text_field($data->get_param('taskDuration')), $new_post_id);
+        update_field('price', sanitize_text_field($data->get_param('taskPrice')), $new_post_id);
+
 
         // set category.
 
