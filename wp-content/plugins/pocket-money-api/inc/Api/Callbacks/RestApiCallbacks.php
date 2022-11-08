@@ -228,7 +228,7 @@ class RestApiCallbacks extends BaseController
   {
 
     // echo $_SERVER['HTTP_ORIGIN'];
-    $allowed = array('http://localhost:9000', 'http://localhost:3000', 'http://localhost', 'https://webpages.tuni.fi');
+    $allowed = array('http://localhost:9000', 'http://localhost:3000', 'http://localhost', 'https://wonderful-panda-70f21b.netlify.app');
 
     $output = array(
       'status' => 0
