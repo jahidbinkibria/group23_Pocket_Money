@@ -164,4 +164,8 @@ table {
   text-align: center;
 }
 
+.hidden {
+  display: none;
+}
+
 /*# sourceMappingURL=frontend.css.map*/
