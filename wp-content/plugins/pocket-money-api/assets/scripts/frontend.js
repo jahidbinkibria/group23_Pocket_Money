@@ -76,8 +76,8 @@ class CaseStudies {
     this.cs_pagination = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#cs_pagination");
     this.cs_pagination_link = this.cs_pagination.find(".page-numbers");
     this.case_study_dropdown = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".case_study_dropdown"); //if we get value from url set it as true.
-
-    jquery__WEBPACK_IMPORTED_MODULE_0___default()('select option[value="ecommerce"]').attr("selected", true); // Check all the pagination links.
+    // $('select option[value="ecommerce"]').attr("selected", true)
+    // Check all the pagination links.
 
     this.cs_pagination_link.each(function () {
       var page_id = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).html();
@@ -133,16 +133,21 @@ class CaseStudies {
       console.log(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).val());
       let $cat = jquery__WEBPACK_IMPORTED_MODULE_0___default()("option:selected", this).attr("data-cat");
       let $tax = jquery__WEBPACK_IMPORTED_MODULE_0___default()("option:selected", this).attr("data-tax"); // let $tax = $this.options[$this.selectedIndex].getAttribute("data-tax")
+      // console.log($cat)
+      // console.log($tax)
 
-      console.log($cat);
-      console.log($tax);
       let getUrl = window.location;
       let baseUrl = getUrl.protocol + "/" + getUrl.host + "/case-studies/";
       console.log(baseUrl); // $url = "";
       // let $current_url = ;
 
-      window.history.pushState("", "", "");
+      window.history.pushState("", "", "/case-studies");
       let $mod_url = "?cat=" + $cat + "&tax=" + $tax;
+
+      if (typeof $cat == "undefined") {
+        $mod_url = "/case-studies";
+      }
+
       window.history.pushState("", "", $mod_url);
       console.log($mod_url); // call ajax in here.
 
@@ -150,9 +155,11 @@ class CaseStudies {
       params.append("action", "load_more_posts");
       params.append("current_page", 1); // will make it dynamic later.
 
-      params.append("tax", getParam("tax")); // will make it dynamic later.
+      if (getParam("tax")) {
+        params.append("tax", getParam("tax")); // will make it dynamic later.
 
-      params.append("cat", getParam("cat")); // will make it dynamic later.
+        params.append("cat", getParam("cat")); // will make it dynamic later.
+      }
 
       if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("#cs_pagination").length) {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()("#cs_pagination").remove();

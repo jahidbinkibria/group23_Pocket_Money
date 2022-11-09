@@ -19,7 +19,7 @@ class CaseStudies {
     this.case_study_dropdown = $(".case_study_dropdown")
 
     //if we get value from url set it as true.
-    $('select option[value="ecommerce"]').attr("selected", true)
+    // $('select option[value="ecommerce"]').attr("selected", true)
 
     // Check all the pagination links.
     this.cs_pagination_link.each(function () {
@@ -84,8 +84,8 @@ class CaseStudies {
       let $tax = $("option:selected", this).attr("data-tax")
       // let $tax = $this.options[$this.selectedIndex].getAttribute("data-tax")
 
-      console.log($cat)
-      console.log($tax)
+      // console.log($cat)
+      // console.log($tax)
 
       let getUrl = window.location
       let baseUrl = getUrl.protocol + "/" + getUrl.host + "/case-studies/"
@@ -94,8 +94,12 @@ class CaseStudies {
       // $url = "";
 
       // let $current_url = ;
-      window.history.pushState("", "", "")
+      window.history.pushState("", "", "/case-studies")
       let $mod_url = "?cat=" + $cat + "&tax=" + $tax
+
+      if (typeof $cat == "undefined") {
+        $mod_url = "/case-studies"
+      }
       window.history.pushState("", "", $mod_url)
       console.log($mod_url)
 
@@ -104,8 +108,11 @@ class CaseStudies {
       let params = new URLSearchParams()
       params.append("action", "load_more_posts")
       params.append("current_page", 1) // will make it dynamic later.
-      params.append("tax", getParam("tax")) // will make it dynamic later.
-      params.append("cat", getParam("cat")) // will make it dynamic later.
+
+      if (getParam("tax")) {
+        params.append("tax", getParam("tax")) // will make it dynamic later.
+        params.append("cat", getParam("cat")) // will make it dynamic later.
+      }
 
       if ($("#cs_pagination").length) {
         $("#cs_pagination").remove()

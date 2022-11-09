@@ -3,3 +3,19 @@
 .hidden {
   display: none;
 }
+
+.case_study_dropdown {
+  width: 200px;
+  float: left;
+  margin: 0 6px;
+}
+
+#all_case_studies {
+  display: block;
+  clear: both;
+}
+
+.no_results_found {
+  clear: both;
+  display: block;
+}

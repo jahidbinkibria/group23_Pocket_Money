@@ -120,6 +120,8 @@ class CaseStudyShortcodes extends BaseController
 
       $all_case_studies .= "</div> <!-- end all_case_studies -->";
     // }
+    else :
+      $all_case_studies = "<p class='no_results_found'>No results found !</p>";
     endif;
     wp_reset_postdata();
     return $all_case_studies;
