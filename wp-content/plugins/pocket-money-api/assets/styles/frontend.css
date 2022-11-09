@@ -19,15 +19,21 @@ body {
 }
 
 body {
+  width: 800px;
+  margin: 24px auto;
   font-family: arial;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 32px;
-  background: red;
 }
 
-h1,
 p {
   margin: 0;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+h1 {
+  line-height: 42px;
 }
 
 h2 {
