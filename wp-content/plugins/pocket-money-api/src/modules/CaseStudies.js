@@ -1,46 +1,86 @@
+import $ from "jquery"
+import axios from "axios"
+
 class CaseStudies {
   //1. INITALIZATION
   constructor() {
-    this.case_study_dropdown = document.querySelector(".case_study_dropdown")
-    this.all_case_studies = document.getElementById("all_case_studies")
-    this.case_studies = document.getElementById("case_studies")
-    this.cs_pagination = document.getElementById("cs_pagination").querySelectorAll(".page-numbers")
-    this.events()
-  }
+    // Stop executing program if there is no "all_case_studies" ID
+    if ($("#all_case_studies").length == 0) return
 
-  //2. EVENTS.
-  events() {
-    // this.case_study_dropdown.addEventListener("change", this.handleDropdown.bind(this))
-    // this.cs_pagination.addEventListener("click", this.handlePagination.bind(this))
+    this.cs_pagination = $("#cs_pagination")
+    this.cs_pagination_link = this.cs_pagination.find(".page-numbers")
+    this.case_study_dropdown = $(".case_study_dropdown")
 
-    var $this = this
+    //if we get value from url set it as true.
+    // $('select option[value="ecommerce"]').attr("selected", true)
 
-    this.cs_pagination.forEach(function (elem) {
-      elem.addEventListener("click", $this.handlePagination.bind(this))
+    // Helper Functions.
+
+    function getParam(param) {
+      return new URLSearchParams(window.location.search).get(param)
+    }
+
+    // Bind Click Events.
+    $(document).on("click", "a.page-numbers", function (e) {
+      var currentPageUrl = $(this).attr("href")
+      var pageNo = currentPageUrl.split("/")
+      var nextPageNo = pageNo[pageNo.length - 2]
+
+      window.history.pushState("", "", currentPageUrl)
+
+      // call ajax in here.
+
+      let params = new URLSearchParams()
+      params.append("action", "load_more_posts")
+      params.append("current_page", nextPageNo) // will make it dynamic later.
+
+      if (getParam("tax")) {
+        params.append("tax", getParam("tax")) // will make it dynamic later.
+        params.append("cat", getParam("cat")) // will make it dynamic later.
+      }
+      if ($("#cs_pagination").length) {
+        $("#cs_pagination").remove()
+      }
+      $("#case_studies").html("Loading....")
+      axios.post("/wp-admin/admin-ajax.php", params).then((res) => {
+        $("#case_studies").html("").html(res.data.data)
+      })
+
+      e.preventDefault()
     })
-  }
 
-  //3. FUNCTIONS/ACTIONS.
+    // Change Dropdown.
 
-  handlePagination(e) {
-    document.getElementById("case_studies").innerHTML = new Date()
-    e.preventDefault()
-  }
+    this.case_study_dropdown.on("change", function () {
+      let $cat = $("option:selected", this).attr("data-cat")
+      let $tax = $("option:selected", this).attr("data-tax")
+      window.history.pushState("", "", "/case-studies")
+      let $mod_url = "?cat=" + $cat + "&tax=" + $tax
 
-  handleDropdown(e) {
-    let $this = e.target
+      if (typeof $cat == "undefined") {
+        $mod_url = "/case-studies"
+      }
+      window.history.pushState("", "", $mod_url)
 
-    let $cat = $this.options[$this.selectedIndex].getAttribute("data-cat")
-    let $tax = $this.options[$this.selectedIndex].getAttribute("data-tax")
+      // call ajax in here.
 
-    // $url = "";
+      let params = new URLSearchParams()
+      params.append("action", "load_more_posts")
+      params.append("current_page", 1) // will make it dynamic later.
 
-    let $mod_url = "cat=" + $cat + "&tax=" + $tax
+      if (getParam("tax")) {
+        params.append("tax", getParam("tax")) // will make it dynamic later.
+        params.append("cat", getParam("cat")) // will make it dynamic later.
+      }
 
-    // let price = element.options[element.selectedIndex].getAttribute("data-price")
-    // console.log(e)
-    // window.history.pushState("", "", "/something")
-    // console.log(e.target.dataset.cat)
+      if ($("#cs_pagination").length) {
+        $("#cs_pagination").remove()
+      }
+      $("#case_studies").html("Loading....")
+      axios.post("/wp-admin/admin-ajax.php", params).then((res) => {
+        $("#case_studies").html("").html(res.data.data)
+      })
+    })
   }
 }
 

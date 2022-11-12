@@ -1,0 +1,1 @@
+{"version":1,"defects":{"Inc\\Base\\Active::test_divison":3,"Inc\\Base\\TestBaseController::test_construct":3},"times":{"Inc\\Base\\Active::test_add":0.001,"Inc\\Base\\Active::test_divison":0.007,"Inc\\Base\\TestBaseController::test_construct":0.002}}
