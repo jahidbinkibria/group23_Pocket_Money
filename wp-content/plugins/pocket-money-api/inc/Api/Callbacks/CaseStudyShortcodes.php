@@ -84,24 +84,12 @@ class CaseStudyShortcodes extends BaseController
 
       $all_case_studies .= "<div id='all_case_studies'>";
 
-      $all_case_studies .= "<div id='case_studies' class='case_studies_inner'>";
+      $all_case_studies .= "<div id='case_studies'>";
       while ($loop->have_posts()) :
 
         $loop->the_post();
-        $the_permalink = get_the_permalink();
-        $the_title = get_the_title();
-        $the_image = "";
-        if (get_post_thumbnail_id() != "") {
-          $the_image .= $this->get_img(get_post_thumbnail_id());
-        }
 
-        $all_case_studies .= "<div class='case_study_item'>
-                                          $the_image
-                                        <h3><a href=$the_permalink>" . $the_title . "</a></h3>
-                                        
-                                        </div>";
-
-      // $all_case_studies .= "<p> </p>";
+        $all_case_studies .= "<p>" . get_the_title() . " </p>";
       // $all_case_studies .= "<p>" . get_the_title() . " Paged: $paged Ajax: $ajax</p>";
 
       endwhile;

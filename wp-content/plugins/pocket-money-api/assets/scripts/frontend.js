@@ -13,6 +13,39 @@ module.exports = typeof self == 'object' ? self.FormData : window.FormData;
 
 /***/ }),
 
+/***/ "./src/modules/Button.js":
+/*!*******************************!*\
+  !*** ./src/modules/Button.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+class Button {
+  //1. INITALIZATION
+  constructor() {
+    this.buttons = document.getElementsByClassName("wp-block-button__link");
+  } //2. EVENTS.
+
+
+  events() {
+    this.buttons.on("click", this.buttonAction.bind(this));
+  } //3. FUNCTIONS/ACTIONS.
+
+
+  buttonAction() {
+    alert(this.target.value);
+  }
+
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Button);
+
+/***/ }),
+
 /***/ "./src/modules/CaseStudies.js":
 /*!************************************!*\
   !*** ./src/modules/CaseStudies.js ***!
@@ -33,13 +66,31 @@ __webpack_require__.r(__webpack_exports__);
 class CaseStudies {
   //1. INITALIZATION
   constructor() {
+    // let params = new URLSearchParams()
+    // params.append("action", "test_load_more_posts")
+    // axios.post("/wp-admin/admin-ajax.php", params).then((res) => {
+    //   // $("#case_studies").html("").html(res.data.data)
+    // })
     // Stop executing program if there is no "all_case_studies" ID
     if (jquery__WEBPACK_IMPORTED_MODULE_0___default()("#all_case_studies").length == 0) return;
     this.cs_pagination = jquery__WEBPACK_IMPORTED_MODULE_0___default()("#cs_pagination");
     this.cs_pagination_link = this.cs_pagination.find(".page-numbers");
     this.case_study_dropdown = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".case_study_dropdown"); //if we get value from url set it as true.
     // $('select option[value="ecommerce"]').attr("selected", true)
-    // Helper Functions.
+    // Check all the pagination links.
+
+    this.cs_pagination_link.each(function () {
+      var page_id = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).html();
+
+      if (jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).hasClass("current")) {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).before(`<a class="page-numbers hidden" href=${window.location.href} page_id=${page_id}>${page_id}</a>`);
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr("data-href", window.location.href);
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr("data-page_id", page_id);
+      } else {
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr("page_id", page_id);
+        jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).after(`<span class="page-numbers hidden" data-href=${jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr("href")} data-page_id=${page_id}>${page_id}</span>`);
+      }
+    });
 
     function getParam(param) {
       return new URLSearchParams(window.location.search).get(param);
@@ -47,9 +98,14 @@ class CaseStudies {
 
 
     jquery__WEBPACK_IMPORTED_MODULE_0___default()(document).on("click", "a.page-numbers", function (e) {
+      // $("a.page-numbers").removeClass("hidden")
+      // $("span.page-numbers").removeClass("current").addClass("hidden")
+      // $(this).addClass("hidden")
+      // $(this).next("span").removeClass("hidden").addClass("current")
       var currentPageUrl = jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).attr("href");
       var pageNo = currentPageUrl.split("/");
-      var nextPageNo = pageNo[pageNo.length - 2];
+      var nextPageNo = pageNo[pageNo.length - 2]; // <span aria-current="page" class="page-numbers current">1</span>
+
       window.history.pushState("", "", currentPageUrl); // call ajax in here.
 
       let params = new URLSearchParams();
@@ -73,9 +129,18 @@ class CaseStudies {
       e.preventDefault();
     }); // Change Dropdown.
 
-    this.case_study_dropdown.on("change", function () {
+    this.case_study_dropdown.on("change", function (elem) {
+      console.log(jquery__WEBPACK_IMPORTED_MODULE_0___default()(this).val());
       let $cat = jquery__WEBPACK_IMPORTED_MODULE_0___default()("option:selected", this).attr("data-cat");
-      let $tax = jquery__WEBPACK_IMPORTED_MODULE_0___default()("option:selected", this).attr("data-tax");
+      let $tax = jquery__WEBPACK_IMPORTED_MODULE_0___default()("option:selected", this).attr("data-tax"); // let $tax = $this.options[$this.selectedIndex].getAttribute("data-tax")
+      // console.log($cat)
+      // console.log($tax)
+
+      let getUrl = window.location;
+      let baseUrl = getUrl.protocol + "/" + getUrl.host + "/case-studies/";
+      console.log(baseUrl); // $url = "";
+      // let $current_url = ;
+
       window.history.pushState("", "", "/case-studies");
       let $mod_url = "?cat=" + $cat + "&tax=" + $tax;
 
@@ -83,7 +148,8 @@ class CaseStudies {
         $mod_url = "/case-studies";
       }
 
-      window.history.pushState("", "", $mod_url); // call ajax in here.
+      window.history.pushState("", "", $mod_url);
+      console.log($mod_url); // call ajax in here.
 
       let params = new URLSearchParams();
       params.append("action", "load_more_posts");
@@ -102,7 +168,7 @@ class CaseStudies {
       jquery__WEBPACK_IMPORTED_MODULE_0___default()("#case_studies").html("Loading....");
       axios__WEBPACK_IMPORTED_MODULE_1__["default"].post("/wp-admin/admin-ajax.php", params).then(res => {
         jquery__WEBPACK_IMPORTED_MODULE_0___default()("#case_studies").html("").html(res.data.data);
-      });
+      }); // elem.addEventListener("change", $this.handleDropdown.bind(this))
     });
   }
 
@@ -4066,11 +4132,16 @@ var __webpack_exports__ = {};
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_frontend_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/frontend.scss */ "./src/styles/frontend.scss");
-/* harmony import */ var _modules_CaseStudies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/CaseStudies */ "./src/modules/CaseStudies.js");
+/* harmony import */ var _modules_Button__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/Button */ "./src/modules/Button.js");
+/* harmony import */ var _modules_CaseStudies__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/CaseStudies */ "./src/modules/CaseStudies.js");
 // Stylesheets.
+// import "animate.css"
+ // import PublicationsSearch from "./modules/PublicationsSearch"
 
 
-new _modules_CaseStudies__WEBPACK_IMPORTED_MODULE_1__["default"]();
+
+var button = new _modules_Button__WEBPACK_IMPORTED_MODULE_1__["default"]();
+new _modules_CaseStudies__WEBPACK_IMPORTED_MODULE_2__["default"]();
 })();
 
 /******/ })()

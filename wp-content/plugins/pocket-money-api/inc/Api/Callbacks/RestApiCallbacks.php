@@ -246,8 +246,18 @@ class RestApiCallbacks extends BaseController
         'post_status' => 'publish'
       );
 
+      // $post_data['meta_input'] = [
+      //   'user_id' => sanitize_text_field($data->get_param('user_id')),
+      //   'game_id' => sanitize_text_field($data->get_param('game_id')),
+      //   'user_res' => sanitize_text_field($data->get_param('user_res')),
+      //   'bot_res' => sanitize_text_field($data->get_param('bot_res')),
+      //   'played_at' => sanitize_text_field($data->get_param('played_at')),
+      //   'game_type_id' => sanitize_text_field($data->get_param('game_type_id')),
+      // ];
+
       $new_post_id = wp_insert_post($post_data);
 
+      // set_field('price', $new_post_id);
 
 
 

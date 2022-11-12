@@ -8,7 +8,6 @@ README.md
 
 !wp-content/plugins
 wp-content/plugins/*
-wp-content/plugins/advanced-custom-fields
 !wp-content/plugins/pocket-money-api
 wp-content/plugins/pocket-money-api/node_modules
 
