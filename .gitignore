@@ -2,6 +2,9 @@
 !wp-content
 !.gitignore
 wp-content/*
+!.github
+docker-compose.yaml
+README.md
 
 !wp-content/plugins
 wp-content/plugins/*
