@@ -27,7 +27,13 @@ class Active extends \WP_UnitTestCase
   public function test_add()
   {
 
+
     $active = new Activate();
+
+
+
+
+    //
 
     $result = $active->add(1, 2);
 

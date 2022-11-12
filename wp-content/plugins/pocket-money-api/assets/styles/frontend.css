@@ -19,6 +19,7 @@ body {
 }
 
 body {
+<<<<<<< HEAD
   width: 800px;
   margin: 24px auto;
   font-family: arial;
@@ -34,6 +35,17 @@ p {
 
 h1 {
   line-height: 42px;
+=======
+  font-family: arial;
+  font-size: 16px;
+  line-height: 32px;
+  background: red;
+}
+
+h1,
+p {
+  margin: 0;
+>>>>>>> 551c52e (- Frontend.)
 }
 
 h2 {
@@ -164,6 +176,7 @@ table {
   text-align: center;
 }
 
+<<<<<<< HEAD
 .hidden {
   display: none;
 }
@@ -174,14 +187,63 @@ table {
   margin: 0 6px;
 }
 
-#all_case_studies {
-  display: block;
-  clear: both;
-}
-
 .no_results_found {
   clear: both;
   display: block;
 }
 
+#all_case_studies {
+  display: block;
+  clear: both;
+  padding: 12px 6px;
+}
+
+.case_studies_inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-column-gap: 45px;
+  grid-row-gap: 45px;
+}
+
+.case_study_item {
+  clear: both;
+}
+
+.case_study_item h3 {
+  color: #283593;
+  font-size: 1.5rem;
+  font-weight: normal;
+  margin: 0;
+}
+
+.case_study_item p {
+  margin: 0;
+  line-height: 1.6;
+  color: #333;
+}
+
+@media only screen and (max-width: 400px) {
+  .case_studies_inner {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+#cs_pagination {
+  clear: both;
+}
+#cs_pagination a.page-numbers {
+  display: inline-block;
+  padding: 0px 16px;
+  text-decoration: none;
+}
+#cs_pagination span.page-numbers.current {
+  background: lightblue;
+  font-weight: bold;
+  display: inline-block;
+  padding: 0px 16px;
+}
+
+=======
+>>>>>>> 551c52e (- Frontend.)
 /*# sourceMappingURL=frontend.css.map*/

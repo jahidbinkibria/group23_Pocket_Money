@@ -31,4 +31,38 @@ class BaseController
     $this->plugin = plugin_basename(dirname(__FILE__, 3)) . '/pocket-money-plugin.php';
     $this->default_scripts_dependency = "jquery";
   }
+
+
+  public function get_img($attachment_id, $img_size = "")
+  {
+
+    $img_width = (isset($img_size) && $img_size != "") ? $img_size : 'full';
+
+    $img_string = wp_get_attachment_image($attachment_id, $img_width);
+
+    return $img_string;
+  }
+
+  function img_dimension($attachment_id, $img_size = "")
+  {
+
+    $img_string = '';
+
+    // thumbnail, medium, large, full
+
+    $img_width = (isset($img_size) && $img_size != "") ? $img_size : 'full';
+
+    $image_info = wp_get_attachment_image_src($attachment_id, $img_width);
+
+    $image_srcset = wp_get_attachment_image_srcset($attachment_id);
+
+    if (isset($image_info) && !empty($image_info)) {
+
+      $img_string .= 'src="' . $image_info[0] . '"';
+      $img_string .= ' width="' . $image_info[1] . '" height="' . $image_info[2] . '" ';
+      $img_string .= ' srcset="' . $image_srcset . '"';
+    }
+
+    return $img_string;
+  }
 }
