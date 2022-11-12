@@ -4,13 +4,6 @@ import axios from "axios"
 class CaseStudies {
   //1. INITALIZATION
   constructor() {
-    // let params = new URLSearchParams()
-    // params.append("action", "test_load_more_posts")
-
-    // axios.post("/wp-admin/admin-ajax.php", params).then((res) => {
-    //   // $("#case_studies").html("").html(res.data.data)
-    // })
-
     // Stop executing program if there is no "all_case_studies" ID
     if ($("#all_case_studies").length == 0) return
 
@@ -21,18 +14,7 @@ class CaseStudies {
     //if we get value from url set it as true.
     // $('select option[value="ecommerce"]').attr("selected", true)
 
-    // Check all the pagination links.
-    this.cs_pagination_link.each(function () {
-      var page_id = $(this).html()
-      if ($(this).hasClass("current")) {
-        $(this).before(`<a class="page-numbers hidden" href=${window.location.href} page_id=${page_id}>${page_id}</a>`)
-        $(this).attr("data-href", window.location.href)
-        $(this).attr("data-page_id", page_id)
-      } else {
-        $(this).attr("page_id", page_id)
-        $(this).after(`<span class="page-numbers hidden" data-href=${$(this).attr("href")} data-page_id=${page_id}>${page_id}</span>`)
-      }
-    })
+    // Helper Functions.
 
     function getParam(param) {
       return new URLSearchParams(window.location.search).get(param)
@@ -40,17 +22,9 @@ class CaseStudies {
 
     // Bind Click Events.
     $(document).on("click", "a.page-numbers", function (e) {
-      // $("a.page-numbers").removeClass("hidden")
-      // $("span.page-numbers").removeClass("current").addClass("hidden")
-
-      // $(this).addClass("hidden")
-      // $(this).next("span").removeClass("hidden").addClass("current")
-
       var currentPageUrl = $(this).attr("href")
       var pageNo = currentPageUrl.split("/")
       var nextPageNo = pageNo[pageNo.length - 2]
-
-      // <span aria-current="page" class="page-numbers current">1</span>
 
       window.history.pushState("", "", currentPageUrl)
 
@@ -77,23 +51,9 @@ class CaseStudies {
 
     // Change Dropdown.
 
-    this.case_study_dropdown.on("change", function (elem) {
-      console.log($(this).val())
-
+    this.case_study_dropdown.on("change", function () {
       let $cat = $("option:selected", this).attr("data-cat")
       let $tax = $("option:selected", this).attr("data-tax")
-      // let $tax = $this.options[$this.selectedIndex].getAttribute("data-tax")
-
-      // console.log($cat)
-      // console.log($tax)
-
-      let getUrl = window.location
-      let baseUrl = getUrl.protocol + "/" + getUrl.host + "/case-studies/"
-      console.log(baseUrl)
-
-      // $url = "";
-
-      // let $current_url = ;
       window.history.pushState("", "", "/case-studies")
       let $mod_url = "?cat=" + $cat + "&tax=" + $tax
 
@@ -101,7 +61,6 @@ class CaseStudies {
         $mod_url = "/case-studies"
       }
       window.history.pushState("", "", $mod_url)
-      console.log($mod_url)
 
       // call ajax in here.
 
@@ -121,8 +80,6 @@ class CaseStudies {
       axios.post("/wp-admin/admin-ajax.php", params).then((res) => {
         $("#case_studies").html("").html(res.data.data)
       })
-
-      // elem.addEventListener("change", $this.handleDropdown.bind(this))
     })
   }
 }
