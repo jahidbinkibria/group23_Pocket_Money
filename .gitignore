@@ -2,6 +2,7 @@
 !.gitignore
 !.github
 !README.md
+!info.txt
 !docker-compose.yaml
 !wp-content
 wp-content/ai1wm-backups
