@@ -1,4 +1,5 @@
 /*
+.git
 !.gitignore
 !.github
 !README.md
@@ -13,9 +14,9 @@ wp-content/plugins/*
 wp-content/plugins/pocket-money-api/node_modules
 wp-content/plugins/pocket-money-api/tests/phpunit/includes
 wp-content/plugins/pocket-money-api/vendor
-
 !wp-content/themes
 wp-content/themes/*
 !wp-content/themes/bwl-starter-theme
+!readme.html
 
 *.wpress
