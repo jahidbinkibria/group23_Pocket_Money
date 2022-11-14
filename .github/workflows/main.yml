@@ -20,3 +20,4 @@ jobs:
           server-dir: /
           exclude: |
             info.txt*
+            wp-config.txt*
