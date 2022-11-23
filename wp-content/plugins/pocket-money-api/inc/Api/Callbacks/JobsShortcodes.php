@@ -9,16 +9,16 @@ namespace Inc\Api\Callbacks;
 use Inc\Base\BaseController;
 use \WP_Query;
 
-class CaseStudyShortcodes extends BaseController
+class JobsShortcodes extends BaseController
 {
 
-  function cb_casestudy($atts)
+  function cb_jobs($atts)
   {
     global $wp_rewrite;
     $atts = shortcode_atts(
       array(
         'ajax' => 0,
-        'post_type' => 'case_study',
+        'post_type' => $this->cpt_jobs,
         'taxonomy' => '', // gg_pub_doc_type, gg_pub_author, gg_pub_year
         'orderby' => 'ID',
         'order'     => 'DESC',
@@ -139,7 +139,7 @@ class CaseStudyShortcodes extends BaseController
     return $all_case_studies;
   }
 
-  function cb_casestudytax($atts)
+  function cb_jobstax($atts)
   {
     $atts = shortcode_atts(
       [

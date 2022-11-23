@@ -17,6 +17,7 @@ class BaseController
   public $plugin_path; // plugin relative url. (use for template or files.)
   public $plugin_url; // plugin absolute url (use for style)
   public $plugin; // plugin base file path.
+  public $cpt_jobs;
 
   public $default_scripts_dependency;
 
@@ -30,5 +31,6 @@ class BaseController
     $this->plugin_url = plugin_dir_url(dirname(__FILE__, 2));
     $this->plugin = plugin_basename(dirname(__FILE__, 3)) . '/pocket-money-plugin.php';
     $this->default_scripts_dependency = "jquery";
+    $this->cpt_jobs = 'jobs';
   }
 }

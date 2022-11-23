@@ -9,9 +9,9 @@ namespace Inc\Shortcodes;
 
 use Inc\Api\ShortcodeApi;
 use \Inc\Base\BaseController;
-use \Inc\Api\Callbacks\CaseStudyShortcodes;
+use \Inc\Api\Callbacks\JobsShortcodes;
 
-class CaseStudy extends BaseController
+class Jobs extends BaseController
 {
 
   public $shortcodes;
@@ -22,16 +22,16 @@ class CaseStudy extends BaseController
   {
 
     $this->shortcodes = new ShortcodeApi();
-    $this->callbacks = new CaseStudyShortcodes();
+    $this->callbacks = new JobsShortcodes();
 
     $shortcodes = [
       [
-        'tag' => 'casestudy',
-        'callback' => [$this->callbacks, 'cb_casestudy']
+        'tag' => 'jobs',
+        'callback' => [$this->callbacks, 'cb_jobs']
       ],
       [
-        'tag' => 'casestudytax',
-        'callback' => [$this->callbacks, 'cb_casestudytax']
+        'tag' => 'jobstax',
+        'callback' => [$this->callbacks, 'cb_jobstax']
       ]
     ];
 

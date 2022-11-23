@@ -25,7 +25,7 @@ class JobsCpt extends BaseController
     $this->job_cpt = new CptApi();
     $this->cpt_settings = [
       [
-        'post_type' => 'jobs', // keep it unique
+        'post_type' => $this->cpt_jobs, // keep it unique
         'menu_name' => 'Jobs',
         'singular_name' => 'Job',
         'menu_icon' => 'dashicons-admin-plugins',
