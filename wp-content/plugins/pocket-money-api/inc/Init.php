@@ -15,7 +15,8 @@ class Init
     return [
       Base\Enqueue::class,
       Base\Language::class,
-      Pages\PmApi::class
+      Pages\PmApi::class,
+      Pages\JobsCpt::class
     ];
   }
 
