@@ -20,7 +20,7 @@ class CreateCallback extends BaseController
   {
 
     // echo $_SERVER['HTTP_ORIGIN'];
-    $allowed = array('http://localhost:9000', 'http://localhost:3000', 'http://localhost', 'https://webpages.tuni.fi');
+    $allowed = $this->allowed_domains;
 
     $output = array(
       'status' => 0
@@ -31,7 +31,7 @@ class CreateCallback extends BaseController
     if (isset($request_address) && in_array($request_address, $allowed)) {
 
       $post_data = array(
-        'post_type' => 'jobs',
+        'post_type' => $this->cpt_jobs,
         'post_title' => sanitize_text_field($data->get_param('taskTitle')),
         'post_content' => sanitize_text_field($data->get_param('taskDetails')),
         // 'post_title' => "gg_spin_" . sanitize_text_field($data->get_param('game_id')),

@@ -6,9 +6,7 @@
 
 namespace Inc\Base;
 
-
 class BaseController
-
 {
 
   public $api_version;
@@ -18,12 +16,11 @@ class BaseController
   public $plugin_url; // plugin absolute url (use for style)
   public $plugin; // plugin base file path.
   public $cpt_jobs;
-
+  public $allowed_domains;
   public $default_scripts_dependency;
 
   public function __construct()
   {
-
     $this->api_version = "pmapi/v1";
     $this->plugin_version = '1.0.1';
     $this->plugin_slug = "pmapi";
@@ -32,5 +29,6 @@ class BaseController
     $this->plugin = plugin_basename(dirname(__FILE__, 3)) . '/pocket-money-plugin.php';
     $this->default_scripts_dependency = "jquery";
     $this->cpt_jobs = 'jobs';
+    $this->allowed_domains = ['http://localhost:9000', 'http://localhost:3000', 'http://localhost', 'https://webpages.tuni.fi'];
   }
 }
