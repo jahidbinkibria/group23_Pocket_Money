@@ -41,8 +41,12 @@ class RestApi extends BaseController
     foreach ($this->api_settings as $api) {
       register_rest_route($this->api_version, $api['tag'], array(
         'methods' => $api['method'],
+<<<<<<< HEAD
         'callback' => $api['callback'],
         'permission_callback' => '__return_true'
+=======
+        'callback' => $api['callback']
+>>>>>>> 1ffb02afedeb03f37f601ccb6ee6cf8fdaeec08c
       ));
     }
   }

@@ -1,4 +1,6 @@
+<<<<<<< HEAD
 /******/ (() => { // webpackBootstrap
+<<<<<<< HEAD
 /******/ 	var __webpack_modules__ = ({
 
 /***/ "./node_modules/axios/node_modules/form-data/lib/browser.js":
@@ -3142,10 +3144,22 @@ function toURLEncodedForm(data, options) {
 /***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
+=======
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./src/modules/Button.js":
+/*!*******************************!*\
+  !*** ./src/modules/Button.js ***!
+  \*******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+>>>>>>> 551c52e (- Frontend.)
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
+<<<<<<< HEAD
 /* harmony import */ var _env_data_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../env/data.js */ "./node_modules/axios/lib/env/data.js");
 /* harmony import */ var _core_AxiosError_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/AxiosError.js */ "./node_modules/axios/lib/core/AxiosError.js");
 
@@ -3356,10 +3370,43 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+=======
+class Button {
+  //1. INITALIZATION
+  constructor() {
+    this.buttons = document.getElementsByClassName("wp-block-button__link");
+  } //2. EVENTS.
+
+
+  events() {
+    this.buttons.on("click", this.buttonAction.bind(this));
+  } //3. FUNCTIONS/ACTIONS.
+
+
+  buttonAction() {
+    alert(this.target.value);
+  }
+
+}
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Button);
+
+/***/ }),
+
+/***/ "./src/styles/frontend.scss":
+/*!**********************************!*\
+  !*** ./src/styles/frontend.scss ***!
+  \**********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+>>>>>>> 551c52e (- Frontend.)
 
 
 /***/ }),
 
+<<<<<<< HEAD
 /***/ "./node_modules/axios/lib/utils.js":
 /*!*****************************************!*\
   !*** ./node_modules/axios/lib/utils.js ***!
@@ -3986,6 +4033,15 @@ const toFiniteNumber = (value, defaultValue) => {
   toFiniteNumber
 });
 
+=======
+/***/ "jquery":
+/*!*************************!*\
+  !*** external "jQuery" ***!
+  \*************************/
+/***/ ((module) => {
+
+module.exports = jQuery;
+>>>>>>> 551c52e (- Frontend.)
 
 /***/ })
 
@@ -4058,21 +4114,43 @@ const toFiniteNumber = (value, defaultValue) => {
 /******/ 	
 /************************************************************************/
 var __webpack_exports__ = {};
+<<<<<<< HEAD
 // This entry need to be wrapped in an IIFE because it need to be in strict mode.
 (() => {
 "use strict";
+=======
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+(() => {
+>>>>>>> 551c52e (- Frontend.)
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _styles_frontend_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./styles/frontend.scss */ "./src/styles/frontend.scss");
+<<<<<<< HEAD
 /* harmony import */ var _modules_CaseStudies__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./modules/CaseStudies */ "./src/modules/CaseStudies.js");
 // Stylesheets.
 
 
 new _modules_CaseStudies__WEBPACK_IMPORTED_MODULE_1__["default"]();
+=======
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! jquery */ "jquery");
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _modules_Button__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Button */ "./src/modules/Button.js");
+// Stylesheets.
+// import "animate.css"
+ // import PublicationsSearch from "./modules/PublicationsSearch"
+
+
+ // var publications_search = new PublicationsSearch()
+
+var button = new _modules_Button__WEBPACK_IMPORTED_MODULE_2__["default"]();
+>>>>>>> 551c52e (- Frontend.)
 })();
 
 /******/ })()
 ;
 //# sourceMappingURL=frontend.js.map
+=======
+(()=>{"use strict";jQuery,new class{constructor(){this.buttons=document.getElementsByClassName("wp-block-button__link")}events(){this.buttons.on("click",this.buttonAction.bind(this))}buttonAction(){alert(this.target.value)}}})();
+>>>>>>> 1ffb02afedeb03f37f601ccb6ee6cf8fdaeec08c

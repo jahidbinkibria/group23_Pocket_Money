@@ -182,7 +182,8 @@ class RestApiCallbacks extends BaseController
         'id' => $post_id,
         'title' => trim(get_the_title()),
         'excerpt' => get_the_excerpt(),
-        'duration' => $duration
+        'duration' => $duration,
+        'price' => get_field('price', $post_id)
       ];
 
       if ($singlePost) {
@@ -196,7 +197,10 @@ class RestApiCallbacks extends BaseController
         $contact = get_field('contact', $post_id);
         $address = get_field('address', $post_id);
         $city = get_field('city', $post_id);
+<<<<<<< HEAD
+=======
         $price = get_field('price', $post_id);
+>>>>>>> pm-034-update-job-api-single-page
 
         $jobInfo['excerpt'] = get_the_content();
         $jobInfo['category'] = $category;
@@ -206,7 +210,10 @@ class RestApiCallbacks extends BaseController
         $jobInfo['contact'] = trim($contact);
         $jobInfo['address'] = trim($address);
         $jobInfo['city'] = $city;
+<<<<<<< HEAD
+=======
         $jobInfo['price'] = trim($price);
+>>>>>>> pm-034-update-job-api-single-page
         $jobInfo['date'] = get_the_date();
       }
 

@@ -18,6 +18,6 @@ class TestBaseController extends \WP_UnitTestCase
     $objBaseController = new BaseController();
 
     $this->assertNotEmpty($objBaseController->plugin_version, "Plugin version is required.");
-    $this->assertEquals("pmapi", $objBaseController->plugin_version, "Plugin slug name must be pmapi");
+    $this->assertEquals("pmapi", $objBaseController->plugin_slug, "Plugin slug name must be pmapi");
   }
 }

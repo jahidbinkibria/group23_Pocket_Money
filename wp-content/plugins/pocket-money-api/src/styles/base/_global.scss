@@ -27,6 +27,7 @@ body {
 }
 
 body {
+<<<<<<< HEAD
   width: 800px;
   margin: 24px auto;
   font-family: arial;
@@ -42,6 +43,17 @@ p {
 
 h1 {
   line-height: 42px;
+=======
+  font-family: arial;
+  font-size: 16px;
+  line-height: 32px;
+  background: $dark-blue;
+}
+
+h1,
+p {
+  margin: 0;
+>>>>>>> 1ffb02afedeb03f37f601ccb6ee6cf8fdaeec08c
 }
 
 h2 {
