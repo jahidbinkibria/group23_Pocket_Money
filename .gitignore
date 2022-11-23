@@ -1,22 +1,15 @@
 /*
-.git
-!.gitignore
-!.github
-!README.md
-!info.txt
-!docker-compose.yaml
 !wp-content
-wp-content/ai1wm-backups
+!.gitignore
 wp-content/*
+
 !wp-content/plugins
 wp-content/plugins/*
 !wp-content/plugins/pocket-money-api
 wp-content/plugins/pocket-money-api/node_modules
-wp-content/plugins/pocket-money-api/tests/*
-wp-content/plugins/pocket-money-api/vendor/*
+
 !wp-content/themes
 wp-content/themes/*
 !wp-content/themes/bwl-starter-theme
-!readme.html
 
 *.wpress

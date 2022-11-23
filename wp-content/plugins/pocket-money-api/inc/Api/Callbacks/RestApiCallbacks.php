@@ -182,8 +182,7 @@ class RestApiCallbacks extends BaseController
         'id' => $post_id,
         'title' => trim(get_the_title()),
         'excerpt' => get_the_excerpt(),
-        'duration' => $duration,
-        'price' => get_field('price', $post_id)
+        'duration' => $duration
       ];
 
       if ($singlePost) {
@@ -197,13 +196,7 @@ class RestApiCallbacks extends BaseController
         $contact = get_field('contact', $post_id);
         $address = get_field('address', $post_id);
         $city = get_field('city', $post_id);
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         $price = get_field('price', $post_id);
->>>>>>> pm-034-update-job-api-single-page
-=======
->>>>>>> bc94d7924104f30815c2e2042d0c7156c2de1a33
 
         $jobInfo['excerpt'] = get_the_content();
         $jobInfo['category'] = $category;
@@ -213,13 +206,7 @@ class RestApiCallbacks extends BaseController
         $jobInfo['contact'] = trim($contact);
         $jobInfo['address'] = trim($address);
         $jobInfo['city'] = $city;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
         $jobInfo['price'] = trim($price);
->>>>>>> pm-034-update-job-api-single-page
-=======
->>>>>>> bc94d7924104f30815c2e2042d0c7156c2de1a33
         $jobInfo['date'] = get_the_date();
       }
 
@@ -241,13 +228,13 @@ class RestApiCallbacks extends BaseController
   {
 
     // echo $_SERVER['HTTP_ORIGIN'];
-    $allowed = array('http://localhost:9000', 'http://localhost:3000', 'http://localhost', 'https://wonderful-panda-70f21b.netlify.app');
+    $allowed = array('http://localhost:9000', 'http://localhost:3000', 'http://localhost', 'https://webpages.tuni.fi');
 
     $output = array(
       'status' => 0
     );
 
-    $request_address = ($_SERVER['SERVER_NAME'] == "localhost") ?  'http://' . $_SERVER['SERVER_NAME'] . ':9000' :  $_SERVER['HTTP_ORIGIN'];
+    $request_address = 'http://' . $_SERVER['SERVER_NAME'] . ':9000';
 
     if (isset($request_address) && in_array($request_address, $allowed)) {
 
@@ -259,31 +246,19 @@ class RestApiCallbacks extends BaseController
         'post_status' => 'publish'
       );
 
+      // $post_data['meta_input'] = [
+      //   'user_id' => sanitize_text_field($data->get_param('user_id')),
+      //   'game_id' => sanitize_text_field($data->get_param('game_id')),
+      //   'user_res' => sanitize_text_field($data->get_param('user_res')),
+      //   'bot_res' => sanitize_text_field($data->get_param('bot_res')),
+      //   'played_at' => sanitize_text_field($data->get_param('played_at')),
+      //   'game_type_id' => sanitize_text_field($data->get_param('game_type_id')),
+      // ];
+
       $new_post_id = wp_insert_post($post_data);
-
-
-
 
       if (!is_wp_error($new_post_id)) {
         // $output['data'] = get_post( $new_post_id ) ;	
-
-
-        update_field('first_name', sanitize_text_field($data->get_param('firstName')), $new_post_id);
-        update_field('last_name', sanitize_text_field($data->get_param('lastName')), $new_post_id);
-        update_field('contact', sanitize_text_field($data->get_param('contact')), $new_post_id);
-        update_field('email', sanitize_text_field($data->get_param('email')), $new_post_id);
-        update_field('address', sanitize_text_field($data->get_param('address')), $new_post_id);
-        update_field('city', sanitize_text_field($data->get_param('city')), $new_post_id);
-        update_field('zip_code', sanitize_text_field($data->get_param('zipCode')), $new_post_id);
-        update_field('duration', sanitize_text_field($data->get_param('taskDuration')), $new_post_id);
-        update_field('price', sanitize_text_field($data->get_param('taskPrice')), $new_post_id);
-
-
-        // set category.
-
-        $job_cat_taxonomy = "category";
-        $job_category = get_term_by('id', $data->get_param('taskCategory'), $job_cat_taxonomy);
-        wp_set_object_terms($new_post_id, $job_category->slug, $job_cat_taxonomy, true);
 
         $output = array(
           'status' => 1,
