@@ -28,6 +28,6 @@ class BaseController
     $this->plugin = plugin_basename(dirname(__FILE__, 3)) . '/pocket-money-plugin.php';
     $this->default_scripts_dependency = "jquery";
     $this->cpt_jobs = 'jobs';
-    $this->allowed_domains = ['http://localhost:9000', 'http://localhost:3000', 'http://localhost', 'https://wonderful-panda-70f21b.netlify.app'];
+    $this->allowed_domains = ['http://localhost:9000', 'http://localhost:3000', 'http://localhost:3001', 'http://localhost', 'https://wonderful-panda-70f21b.netlify.app'];
   }
 }

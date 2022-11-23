@@ -26,7 +26,7 @@ class CreateCallback extends BaseController
       'status' => 0
     );
 
-    $request_address = strpos($_SERVER['HTTP_ORIGIN'], 'localhost') ? 'http://' . $_SERVER['HTTP_ORIGIN'] . ':9000' : $_SERVER['HTTP_ORIGIN'];
+    $request_address = strpos($_SERVER['HTTP_ORIGIN'], 'localhost') ? $_SERVER['HTTP_ORIGIN'] : $_SERVER['HTTP_ORIGIN'];
 
     if (isset($request_address) && in_array($request_address, $allowed)) {
 
