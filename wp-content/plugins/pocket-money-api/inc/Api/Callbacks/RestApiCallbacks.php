@@ -198,9 +198,12 @@ class RestApiCallbacks extends BaseController
         $address = get_field('address', $post_id);
         $city = get_field('city', $post_id);
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         $price = get_field('price', $post_id);
 >>>>>>> pm-034-update-job-api-single-page
+=======
+>>>>>>> bc94d7924104f30815c2e2042d0c7156c2de1a33
 
         $jobInfo['excerpt'] = get_the_content();
         $jobInfo['category'] = $category;
@@ -211,9 +214,12 @@ class RestApiCallbacks extends BaseController
         $jobInfo['address'] = trim($address);
         $jobInfo['city'] = $city;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         $jobInfo['price'] = trim($price);
 >>>>>>> pm-034-update-job-api-single-page
+=======
+>>>>>>> bc94d7924104f30815c2e2042d0c7156c2de1a33
         $jobInfo['date'] = get_the_date();
       }
 
