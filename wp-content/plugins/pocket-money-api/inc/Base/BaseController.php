@@ -8,7 +8,6 @@ namespace Inc\Base;
 
 class BaseController
 {
-
   public $api_version;
   public $plugin_version;
   public $plugin_slug;
