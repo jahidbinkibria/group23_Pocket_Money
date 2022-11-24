@@ -1,8 +1,14 @@
 <?php
 
-
 /**
- * @package PMApiPlugin
+ * Called during create new job post.
+ *
+ * This class defines all code necessary to create a new job post.
+ *
+ * @since      1.0.0
+ * @package    PMApiPlugin
+ * @subpackage PMApiPlugin/Api/Callbacks/Rest
+ * @author     Md Mahbub Alam Khan <hkhan.cse@gmail.com>
  */
 
 namespace Inc\Api\Callbacks\Rest;
@@ -15,16 +21,17 @@ class CreateCallback extends BaseController
 
 {
 
-  public $email_api;
+  public $emailApi;
+  public $metaFields;
+  public $newPostId;
+  public $first_name;
+  public $email;
 
   // Create Job Post.
 
   public function pmCreateJob($data)
   {
 
-    $this->email_api = new EmailApi();
-
-    // echo $_SERVER['HTTP_ORIGIN'];
     $allowed = $this->allowed_domains;
 
     $output = array(
@@ -35,6 +42,18 @@ class CreateCallback extends BaseController
 
     if (isset($request_address) && in_array($request_address, $allowed)) {
 
+      $this->metaFields = [
+        'first_name' => 'firstName', // key=meta_key in database, value=ajax_request_key
+        'last_name' => 'lastName',
+        'contact' => 'contact',
+        'email' => 'email',
+        'address' => 'address',
+        'city' => 'city',
+        'task_day' => 'taskDay',
+        'duration' => 'taskDuration',
+        'price' => 'taskPrice',
+      ];
+
       $post_data = array(
         'post_type' => $this->cpt_jobs,
         'post_title' => sanitize_text_field($data->get_param('taskTitle')),
@@ -42,44 +61,29 @@ class CreateCallback extends BaseController
         'post_status' => 'publish'
       );
 
-      $new_post_id = wp_insert_post($post_data);
+      $this->newPostId = wp_insert_post($post_data);
 
-      if (!is_wp_error($new_post_id)) {
-        // $output['data'] = get_post( $new_post_id ) ;	
+      if (!is_wp_error($this->newPostId)) {
 
+        $this->first_name = sanitize_text_field($data->get_param('firstName'));
+        $this->email = sanitize_text_field($data->get_param('email'));
 
-        update_field('first_name', sanitize_text_field($data->get_param('firstName')), $new_post_id);
-        update_field('last_name', sanitize_text_field($data->get_param('lastName')), $new_post_id);
-        update_field('contact', sanitize_text_field($data->get_param('contact')), $new_post_id);
-        update_field('email', sanitize_text_field($data->get_param('email')), $new_post_id);
-        update_field('address', sanitize_text_field($data->get_param('address')), $new_post_id);
-        update_field('city', sanitize_text_field($data->get_param('city')), $new_post_id);
-        update_field('task_day', sanitize_text_field($data->get_param('taskDay')), $new_post_id);
-        update_field('duration', sanitize_text_field($data->get_param('taskDuration')), $new_post_id);
-        update_field('price', sanitize_text_field($data->get_param('taskPrice')), $new_post_id);
-
+        foreach ($this->metaFields as $meta_key => $req_param) {
+          update_field($meta_key, sanitize_text_field($data->get_param($req_param)), $this->newPostId);
+        }
 
         // set category.
 
         $job_cat_taxonomy = "category";
         $job_category = get_term_by('id', $data->get_param('taskCategory'), $job_cat_taxonomy);
-        wp_set_object_terms($new_post_id, $job_category->slug, $job_cat_taxonomy, true);
+        wp_set_object_terms($this->newPostId, $job_category->slug, $job_cat_taxonomy, true);
 
         $output = array(
           'status' => 1,
           'msg' => 'New post created.'
         );
 
-        $editLink = $this->app_url . "/job/edit/$new_post_id";
-        $emailBody = "<p>Congratulations! </p><p>Your submitted job post published succesfully. <br>For edit/delete the job details you can use this <a href='$editLink'>link</a>.<br>Thank you!</p>";
-
-        $email_settings = [[
-          'to' => trim($data->get_param('email')), // the recipient.
-          'subject' => 'New Job Created', // email body
-          'body' =>  $emailBody // email body
-        ]];
-
-        $this->email_api->addEmail($email_settings)->register();
+        $this->sendJobCreateEmail();
       } else {
 
         $output = array(
@@ -98,5 +102,27 @@ class CreateCallback extends BaseController
     }
 
     return $output;
+  }
+
+  private function sendJobCreateEmail()
+  {
+
+    $this->emailApi = new EmailApi();
+
+    $email_settings = [[
+      'to' => trim($this->email), // the recipient.
+      'subject' => 'New Job Created', // email body
+      'body' =>  $this->getEmailTemplate() // email body
+    ]];
+
+    $this->emailApi->addEmail($email_settings)->register();
+  }
+
+  private function getEmailTemplate()
+  {
+
+    $editLink = "$this->app_url/job/edit/$this->newPostId";
+    $jobLink = "$this->app_url/job/$this->newPostId";
+    return "<p>Hello $this->first_name,</p><p>Congratulations! </p><p>Your submitted <a href='$jobLink'>job post</a> published succesfully. <br>To edit/delete the job details, you can use this <a href='$editLink'>link</a>.<br>Thank you!</p>";
   }
 }
