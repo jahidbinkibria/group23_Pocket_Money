@@ -7,11 +7,10 @@
 
 namespace Inc\Api\Callbacks\Rest;
 
-use Inc\Base\BaseController;
 use \WP_Query;
+use Inc\Base\BaseController;
 
 class ReadCallback extends BaseController
-
 {
 
   // Get All Jobs.
@@ -86,12 +85,6 @@ class ReadCallback extends BaseController
 
       array_push($jobs_data['job_data'], $jobInfo);
     }
-
-    // echo "<pre>";
-    // print_r($result);
-    // echo "</pre>";
-
-
 
     return $jobs_data;
   }

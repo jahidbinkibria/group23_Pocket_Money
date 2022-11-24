@@ -7,18 +7,22 @@
 
 namespace Inc\Api\Callbacks\Rest;
 
-use Inc\Base\BaseController;
-use Inc\Base\Helper;
 use \WP_Query;
+use Inc\Api\EmailApi;
+use Inc\Base\BaseController;
 
 class CreateCallback extends BaseController
 
 {
 
+  public $email_api;
+
   // Create Job Post.
 
   public function pmCreateJob($data)
   {
+
+    $this->email_api = new EmailApi();
 
     // echo $_SERVER['HTTP_ORIGIN'];
     $allowed = $this->allowed_domains;
@@ -66,7 +70,16 @@ class CreateCallback extends BaseController
           'msg' => 'New post created.'
         );
 
-        Helper::SendEmail($data->get_param('email'), $new_post_id);
+        $editLink = $this->app_url . "/job/edit/$new_post_id";
+        $emailBody = "<p>Congratulations! </p><p>Your submitted job post published succesfully. <br>For edit/delete the job details you can use this <a href='$editLink'>link</a>.<br>Thank you!</p>";
+
+        $email_settings = [[
+          'to' => trim($data->get_param('email')), // the recipient.
+          'subject' => 'New Job Created', // email body
+          'body' =>  $emailBody // email body
+        ]];
+
+        $this->email_api->addEmail($email_settings)->register();
       } else {
 
         $output = array(

@@ -6,6 +6,7 @@
 
 namespace Inc\Base;
 
+
 class BaseController
 {
   public $app_url;
@@ -18,6 +19,8 @@ class BaseController
   public $cpt_jobs;
   public $allowed_domains;
   public $default_scripts_dependency;
+
+  public $no_reply_email = 'no-reply@pocket-money-23.netlify.app';
 
   public function __construct()
   {

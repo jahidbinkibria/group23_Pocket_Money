@@ -37,7 +37,6 @@ class Helper
     return $response;
   }
 
-
   public static function SendEmail($to, $id)
   {
 
