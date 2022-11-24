@@ -51,12 +51,17 @@ class ReadCallback extends BaseController
 
 
       $duration = get_field('duration', $post_id) ?: 0;
+      $city = get_field('city', $post_id);
+      $price = get_field('price', $post_id);
+      $dateFormat = "d.m.Y";
 
       $jobInfo = [
         'id' => $post_id,
         'title' => trim(get_the_title()),
-        'excerpt' => get_the_excerpt(),
-        'duration' => $duration
+        'duration' => $duration,
+        'city' => $city,
+        'price' => trim($price),
+        'date' => get_the_date($dateFormat)
       ];
 
       if ($singlePost) {
@@ -69,8 +74,6 @@ class ReadCallback extends BaseController
         $email = get_field('email', $post_id);
         $contact = get_field('contact', $post_id);
         $address = get_field('address', $post_id);
-        $city = get_field('city', $post_id);
-        $price = get_field('price', $post_id);
 
         $jobInfo['excerpt'] = get_the_content();
         $jobInfo['category'] = $category;
@@ -79,9 +82,6 @@ class ReadCallback extends BaseController
         $jobInfo['email'] = trim($email);
         $jobInfo['contact'] = trim($contact);
         $jobInfo['address'] = trim($address);
-        $jobInfo['city'] = $city;
-        $jobInfo['price'] = trim($price);
-        $jobInfo['date'] = get_the_date();
       }
 
       array_push($jobs_data['job_data'], $jobInfo);

@@ -8,6 +8,7 @@ namespace Inc\Base;
 
 class BaseController
 {
+  public $app_url;
   public $api_version;
   public $plugin_version;
   public $plugin_slug;
@@ -20,6 +21,7 @@ class BaseController
 
   public function __construct()
   {
+    $this->app_url = "https://pocket-money-23.netlify.app";
     $this->api_version = "pmapi/v1";
     $this->plugin_version = '1.0.1';
     $this->plugin_slug = "pmapi";
@@ -28,6 +30,6 @@ class BaseController
     $this->plugin = plugin_basename(dirname(__FILE__, 3)) . '/pocket-money-plugin.php';
     $this->default_scripts_dependency = "jquery";
     $this->cpt_jobs = 'jobs';
-    $this->allowed_domains = ['http://localhost:9000', 'http://localhost:3000', 'http://localhost:3001', 'http://localhost', 'https://wonderful-panda-70f21b.netlify.app'];
+    $this->allowed_domains = ['http://localhost:9000', 'http://localhost:3000', 'http://localhost:3001', 'http://localhost', $this->app_url];
   }
 }
