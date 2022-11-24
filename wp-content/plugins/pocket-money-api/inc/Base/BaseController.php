@@ -20,7 +20,7 @@ class BaseController
   public $allowed_domains;
   public $default_scripts_dependency;
 
-  public $no_reply_email = 'no-reply@pocket-money-23.netlify.app';
+  public $no_reply_email = 'no-reply@pmapi.bluewindlab.com';
 
   public function __construct()
   {

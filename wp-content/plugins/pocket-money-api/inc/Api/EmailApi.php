@@ -45,13 +45,13 @@ class EmailApi extends BaseController
       // print_r($settings);
       // echo "</pre>";
 
-      // $reply_to = sanitize_email($this->no_reply_email);
+      $reply_to = sanitize_email($this->no_reply_email);
 
-      // $headers[] = "From: $header <$reply_to>";
+      $headers[] = "From: Confirmation <$reply_to>";
       // $headers[] = "From: $header";
 
       add_filter('wp_mail_content_type', [$this, 'set_html_content_type']);
-      \wp_mail($to, $subject, $body);
+      \wp_mail($to, $subject, $body, $headers);
       remove_filter('wp_mail_content_type', [$this, 'set_html_content_type']);
     }
   }
