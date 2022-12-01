@@ -16,38 +16,8 @@ class ReadCallback extends BaseController
 
   // Get All Jobs.
 
-  private function updateUUID()
-  {
-
-    $args = [
-      'post_status' => 'publish',
-      'post_type' => 'jobs',
-      'posts_per_page' => -1
-    ];
-
-    $jobs = new WP_Query($args);
-
-    while ($jobs->have_posts()) {
-
-      $jobs->the_post();
-
-      $post_id = get_the_ID();
-
-      $jobID = get_post_meta($post_id, 'jobId');
-
-      if (empty($jobID)) {
-        update_post_meta($post_id, 'jobId', Uuid::uuid4()->toString());
-      }
-    }
-  }
-
   public function pmAllJobs($data)
   {
-
-    if (get_option('pmJobIdUpdate') != 1) {
-      $this->updateUUID();
-      update_option('pmJobIdUpdate', 1);
-    }
 
     $jobs_data = [];
     $singlePost = $data['p_id'] ?? false; // if data['p_id'] value set then we are going to use that value other wise value is 0.
