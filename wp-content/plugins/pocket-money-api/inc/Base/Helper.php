@@ -11,6 +11,23 @@ use Inc\Base\BaseController;
 
 class Helper
 {
+
+  public static function getJobHashById($jobId)
+  {
+    $pluginInfo = new BaseController();
+    $jobHash = get_post_meta($jobId, $pluginInfo->jobHashTag, true) ?? 0;
+    return $jobHash;
+  }
+
+  public static function getJobIdByJobHash($hashId)
+  {
+    global $wpdb;
+    $results = $wpdb->get_results("select post_id from " . $wpdb->prefix . "postmeta where meta_value = '$hashId'", ARRAY_A);
+
+    $jobId = $results[0]['post_id'] ?? 0;
+    return $jobId;
+  }
+
   public static function checkJobInfo($data)
   {
 

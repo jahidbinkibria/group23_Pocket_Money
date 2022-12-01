@@ -8,6 +8,7 @@
 namespace Inc\Api\Callbacks\Rest;
 
 use Inc\Base\BaseController;
+use Inc\Base\Helper;
 use \WP_Query;
 
 class SearchCallback extends BaseController
@@ -115,7 +116,7 @@ class SearchCallback extends BaseController
 
 
       array_push($jobs_data, array(
-        'id' => $post_id,
+        'id' => Helper::getJobHashById($post_id),
         'title' => get_the_title(),
         // 'excerpt' => get_the_excerpt(),
         // 'category' => $category,
