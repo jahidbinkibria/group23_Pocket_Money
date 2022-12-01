@@ -12,6 +12,7 @@
  */
 
 namespace Inc\Api\Callbacks\Rest;
+
 use Ramsey\Uuid\Uuid;
 
 use \WP_Query;
@@ -19,14 +20,13 @@ use Inc\Api\EmailApi;
 use Inc\Base\BaseController;
 
 class CreateCallback extends BaseController
-
 {
-
   public $emailApi;
   public $metaFields;
   public $newPostId;
   public $first_name;
   public $email;
+  public $jobHashId;
 
   // Create Job Post.
 
@@ -79,7 +79,9 @@ class CreateCallback extends BaseController
         $job_category = get_term_by('id', $data->get_param('taskCategory'), $job_cat_taxonomy);
         wp_set_object_terms($this->newPostId, $job_category->slug, $job_cat_taxonomy, true);
 
-        add_post_meta($this->newPostId, 'jobId', Uuid::uuid4()->toString());
+        $this->jobHashId = Uuid::uuid4()->toString();
+
+        add_post_meta($this->newPostId, $this->jobHashTag, $this->jobHashId);
 
         $output = array(
           'status' => 1,
@@ -124,8 +126,8 @@ class CreateCallback extends BaseController
   private function getEmailTemplate()
   {
 
-    $editLink = "$this->app_url/job/edit/$this->newPostId";
+    $editLink = "$this->app_url/job/edit/$this->jobHashId/$this->newPostId";
     $jobLink = "$this->app_url/job/$this->newPostId";
-    return "<p>Hello $this->first_name,</p><p>Congratulations! </p><p>Your submitted <a href='$jobLink'>job post</a> published succesfully. <br>To edit/delete the job details, you can use this <a href='$editLink'>link</a>.<br>Thank you!</p>";
+    return "<p>Hello $this->first_name,</p><p>Congratulations! </p><p>Your submitted <a href='$jobLink'>job post</a> published succesfully. <br>To edit/delete the job details, use this <a href='$editLink'>link</a>.<br>Thank you!</p>";
   }
 }

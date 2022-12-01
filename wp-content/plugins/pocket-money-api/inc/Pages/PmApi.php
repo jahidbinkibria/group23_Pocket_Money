@@ -52,6 +52,11 @@ class PmApi extends BaseController
         'callback' => [$this->cb_read, 'pmAllJobs']
       ], //wp-json/pmapi/v1/jobs
       [
+        'tag' => 'job',
+        'method' => \WP_REST_SERVER::READABLE,
+        'callback' => [$this->cb_read, 'singleJob']
+      ], //wp-json/pmapi/v1/job/
+      [
         'tag' => 'edit',
         'method' => \WP_REST_SERVER::EDITABLE,
         'callback' => [$this->cb_edit, 'pmEditJob']

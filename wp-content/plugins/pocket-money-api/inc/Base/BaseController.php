@@ -19,6 +19,8 @@ class BaseController
   public $cpt_jobs;
   public $allowed_domains;
   public $default_scripts_dependency;
+  public $jobHashTag;
+  public $jobDateFormat;
 
   public $no_reply_email = 'no-reply@pmapi.bluewindlab.com';
 
@@ -34,5 +36,7 @@ class BaseController
     $this->default_scripts_dependency = "jquery";
     $this->cpt_jobs = 'jobs';
     $this->allowed_domains = ['http://localhost:9000', 'http://localhost:3000', 'http://localhost:3001', 'http://localhost', $this->app_url];
+    $this->jobHashTag = "jobId";
+    $this->jobDateFormat = "d.m.Y";
   }
 }
