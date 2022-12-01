@@ -1,7 +1,2 @@
 wp-content/plugins/pocket-money-api/node_modules
-wp-content/plugins/acf-to-rest-api
-wp-content/plugins/advanced-custom-fields
-wp-content/plugins/all-in-one-wp-migration
-wp-content/plugins/duplicate-post
-wp-config.php
 *.wpress

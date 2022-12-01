@@ -7,6 +7,7 @@
 
 namespace Inc\Api\Callbacks\Rest;
 
+use Ramsey\Uuid\Uuid;
 use \WP_Query;
 use Inc\Base\BaseController;
 
@@ -15,9 +16,40 @@ class ReadCallback extends BaseController
 
   // Get All Jobs.
 
+  private function updateUUID()
+  {
+
+    $args = [
+      'post_status' => 'publish',
+      'post_type' => 'jobs',
+      'posts_per_page' => -1
+    ];
+
+    $jobs = new WP_Query($args);
+
+    while ($jobs->have_posts()) {
+
+      $jobs->the_post();
+
+      $post_id = get_the_ID();
+
+      $jobID = get_post_meta($post_id, 'jobId');
+
+      if (empty($jobID)) {
+        update_post_meta($post_id, 'jobId', Uuid::uuid4()->toString());
+      }
+    }
+  }
+
   public function pmAllJobs($data)
   {
 
+    if (get_option('pmJobIdUpdate') != 1) {
+      $this->updateUUID();
+      update_option('pmJobIdUpdate', 1);
+    }
+
+    $jobs_data = [];
     $singlePost = $data['p_id'] ?? false; // if data['p_id'] value set then we are going to use that value other wise value is 0.
 
     // http://yourdomain.com/wp-json/pmapi/v1/jobs
@@ -33,21 +65,29 @@ class ReadCallback extends BaseController
     ];
 
     if ($singlePost) {
-      $args['p'] = $data['p_id'];
+
+      // Fetch Post ID By JobId.
+
+      global $wpdb;
+      $results = $wpdb->get_results("select post_id from " . $wpdb->prefix . "postmeta where meta_value = '$singlePost'", ARRAY_A);
+
+      $args['p'] = $results[0]['post_id'] ?? 0;
+      if ($args['p'] == 0) {
+        $jobs_data['job_data']['status'] = false;
+        return $jobs_data;
+      }
     }
 
     $jobs = new WP_Query($args);
-    $result = $jobs;
 
     $jobs_data['max_pages'] = $jobs->max_num_pages;
     $jobs_data['job_data'] = [];
 
-    while ($result->have_posts()) {
+    while ($jobs->have_posts()) {
 
-      $result->the_post();
+      $jobs->the_post();
 
       $post_id = get_the_ID();
-
 
       $duration = get_field('duration', $post_id) ?: 0;
       $city = get_field('city', $post_id);
@@ -55,7 +95,7 @@ class ReadCallback extends BaseController
       $dateFormat = "d.m.Y";
 
       $jobInfo = [
-        'id' => $post_id,
+        'uuid' => get_post_meta($post_id, 'jobId', true),
         'title' => trim(get_the_title()),
         'duration' => $duration,
         'city' => $city,
@@ -85,7 +125,7 @@ class ReadCallback extends BaseController
 
       array_push($jobs_data['job_data'], $jobInfo);
     }
-
+    $jobs_data['status'] = true;
     return $jobs_data;
   }
 }

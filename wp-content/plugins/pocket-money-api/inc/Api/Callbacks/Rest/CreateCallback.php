@@ -12,6 +12,7 @@
  */
 
 namespace Inc\Api\Callbacks\Rest;
+use Ramsey\Uuid\Uuid;
 
 use \WP_Query;
 use Inc\Api\EmailApi;
@@ -77,6 +78,8 @@ class CreateCallback extends BaseController
         $job_cat_taxonomy = "category";
         $job_category = get_term_by('id', $data->get_param('taskCategory'), $job_cat_taxonomy);
         wp_set_object_terms($this->newPostId, $job_category->slug, $job_cat_taxonomy, true);
+
+        add_post_meta($this->newPostId, 'jobId', Uuid::uuid4()->toString());
 
         $output = array(
           'status' => 1,
