@@ -9,8 +9,21 @@ namespace Inc\Base;
 
 use Inc\Base\BaseController;
 
-class Helper
+class Helpers
 {
+
+  // Get all the custom colums header 
+  public static function getColumnCustomHeaders()
+  {
+
+    return [
+      'ID' => esc_html__('ID', 'bwl-pro-voting-manager'),
+      'jobId' => esc_html__('Job Id', 'bwl-pro-voting-manager'),
+      // 'pvm_dislike_votes_count' => esc_html__('Dislike', 'bwl-pro-voting-manager'),
+      // 'pvm_feedback' => esc_html__('Feedback', 'bwl-pro-voting-manager'),
+      // 'bwl_pvm_display_status' => __('Voting <br /> Status', 'bwl-pro-voting-manager')
+    ];
+  }
 
   public static function getJobHashById($jobId)
   {

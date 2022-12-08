@@ -7,21 +7,22 @@
 
 namespace Inc\Api\Callbacks\Rest;
 
-use Ramsey\Uuid\Uuid;
 use \WP_Query;
 use Inc\Base\BaseController;
-use Inc\Base\Helper;
+use Inc\Base\Helpers;
 
 class ReadCallback extends BaseController
 {
 
-  // Get All Jobs.
+  /**
+   * Get All Jobs.
+   * Request: wp-json/pmapi/v1/jobs
+   */
 
   public function pmAllJobs($data)
   {
 
-
-    $jobs_data = [];
+    $jobsData = [];
 
     // http://yourdomain.com/wp-json/pmapi/v1/jobs
     $args = [
@@ -47,7 +48,7 @@ class ReadCallback extends BaseController
       );
 
       $catObj = get_category_by_slug($data['catslug']);
-      $jobs_data['cat_name'] = $catObj->name;
+      $jobsData['cat_name'] = $catObj->name;
     }
 
     $jobs = new WP_Query($args);
@@ -56,85 +57,91 @@ class ReadCallback extends BaseController
 
     if ($totalJobs < 1) {
 
-      $jobs_data['job_data']['status'] = false;
-      return $jobs_data;
+      $jobsData['job_data']['status'] = false;
+      return $jobsData;
     }
 
-    $jobs_data['max_pages'] = $jobs->max_num_pages;
-    $jobs_data['job_data'] = [];
+    $jobsData['max_pages'] = $jobs->max_num_pages;
+    $jobsData['job_data'] = [];
 
     while ($jobs->have_posts()) {
 
       $jobs->the_post();
 
-      $post_id = get_the_ID();
+      $postId = get_the_ID();
 
-      $duration = get_field('duration', $post_id) ?: 0;
-      $city = get_field('city', $post_id);
-      $price = get_field('price', $post_id);
-      $dateFormat = $this->jobDateFormat;
+      $duration = get_field('duration', $postId) ?: 0;
+      $city = get_field('city', $postId);
+      $price = get_field('price', $postId);
+      $jobDate = date("d.m.Y", strtotime(get_field('task_day', $postId)));
 
       $jobInfo = [
-        'uuid' => get_post_meta($post_id, $this->jobHashTag, true),
+        'uuid' => get_post_meta($postId, $this->jobHashTag, true),
         'title' => trim(get_the_title()),
         'duration' => $duration,
         'city' => $city,
         'price' => trim($price),
-        'date' => get_the_date($dateFormat)
+        'date' => $jobDate
       ];
 
-      array_push($jobs_data['job_data'], $jobInfo);
+      array_push($jobsData['job_data'], $jobInfo);
     }
-    $jobs_data['status'] = true;
-    return $jobs_data;
+    $jobsData['status'] = true;
+    return $jobsData;
   }
+
+
+  /**
+   * Get Single Job.
+   * Request: wp-json/pmapi/v1/job?p_id=0c68a6f4-09fb-4f68-bc45-bd2552cc3e88
+   */
 
   public function singleJob($data)
   {
 
-    $jobs_data = [];
+    $jobData = [];
     $singlePost = $data['p_id'] ?? false; // if data['p_id'] value set then we are going to use that value other wise value is 0.
 
     if ($singlePost == false) {
-      $jobs_data['job_data']['status'] = false;
-      return $jobs_data;
+      $jobData['job_data']['status'] = false;
+      return $jobData;
     }
 
-    // http://yourdomain.com/wp-json/pmapi/v1/job?p_id=0c68a6f4-09fb-4f68-bc45-bd2552cc3e88
 
     $args = [
       'post_status' => 'publish',
       'post_type' => $this->cpt_jobs,
       'posts_per_page' => 1,
-      'p' => Helper::getJobIdByJobHash($singlePost)
+      'p' => Helpers::getJobIdByJobHash($singlePost)
     ];
 
     $jobs = new WP_Query($args);
 
-    $jobs_data['job_data'] = [];
+    $jobData['job_data'] = [];
 
     while ($jobs->have_posts()) {
 
       $jobs->the_post();
 
-      $post_id = get_the_ID();
+      $postId = get_the_ID();
 
-      $duration = get_field('duration', $post_id) ?: 0;
-      $city = get_field('city', $post_id);
-      $price = get_field('price', $post_id);
-      $dateFormat = $this->jobDateFormat;
+      $duration = get_field('duration', $postId) ?: 0;
+      $city = get_field('city', $postId);
+      $price = get_field('price', $postId);
+      $jobDate = date("d.m.Y", strtotime(get_field('task_day', $postId)));
 
       $jobInfo = [
-        'uuid' => get_post_meta($post_id, $this->jobHashTag, true),
+        // 'id' => $postId,
+        'uuid' => get_post_meta($postId, $this->jobHashTag, true),
         'title' => trim(get_the_title()),
         'duration' => $duration,
         'city' => $city,
         'price' => trim($price),
-        'date' => get_the_date($dateFormat)
+        'date' => $jobDate
       ];
 
 
-      $category = get_the_terms($post_id, 'category');
+      $category = get_the_terms($postId, 'category');
       // echo "<pre>";
       // print_r($category);
       // echo "</pre>";
@@ -143,12 +150,13 @@ class ReadCallback extends BaseController
       // echo "</pre>";
       // $category = join(', ', wp_list_pluck($category, 'name'));
 
-      $first_name = get_field('first_name', $post_id);
-      $last_name = get_field('last_name', $post_id);
-      $email = get_field('email', $post_id);
-      $contact = get_field('contact', $post_id);
-      $address = get_field('address', $post_id);
+      $first_name = get_field('first_name', $postId);
+      $last_name = get_field('last_name', $postId);
+      $email = get_field('email', $postId);
+      $contact = get_field('contact', $postId);
+      $address = get_field('address', $postId);
 
+      $jobInfo['nonce'] = wp_create_nonce('wp_rest');
       $jobInfo['excerpt'] = get_the_content();
 
       $jobInfo['first_name'] = trim($first_name);
@@ -159,10 +167,25 @@ class ReadCallback extends BaseController
       if (!empty($category)) {
         $jobInfo['category'] = $category[0]->name;
         $jobInfo['cat_slug'] = $category[0]->slug;
+        $jobInfo['cat_id'] = $category[0]->term_id;
       }
-      array_push($jobs_data['job_data'], $jobInfo);
+      array_push($jobData['job_data'], $jobInfo);
     }
-    $jobs_data['status'] = true;
-    return $jobs_data;
+    $jobData['status'] = true;
+    return $jobData;
+  }
+
+  public function jobCategories()
+  {
+    $categories = [
+      '3' => 'Care Giving',
+      '4' => 'Parcel Delivery',
+      '5' => 'Repair',
+    ];
+
+    $data['categories'] = $categories;
+    $data['status'] = true;
+
+    return $data;
   }
 }

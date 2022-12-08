@@ -28,7 +28,7 @@ class JobsCpt extends BaseController
         'post_type' => $this->cpt_jobs, // keep it unique
         'menu_name' => 'Jobs',
         'singular_name' => 'Job',
-        'menu_icon' => 'dashicons-admin-plugins',
+        'menu_icon' => 'dashicons-welcome-write-blog',
         'query_var' => 'jobs'
       ]
     ];

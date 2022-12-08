@@ -8,7 +8,7 @@
 namespace Inc\Api\Callbacks\Rest;
 
 use Inc\Base\BaseController;
-use Inc\Base\Helper;
+use Inc\Base\Helpers;
 use \WP_Query;
 
 class DeleteCallback extends BaseController
@@ -28,7 +28,7 @@ class DeleteCallback extends BaseController
     if ($jobId == 0) {
       return $response;
     } else {
-
+      // echo $jobId;
       // Run delete query. 
       wp_delete_post($jobId);
       $response['status'] = 1;
@@ -44,7 +44,7 @@ class DeleteCallback extends BaseController
 
   public function pmDeleteJob($data)
   {
-    $jobInfo = Helper::checkJobInfo($data);
+    $jobInfo = Helpers::checkJobInfo($data);
 
     return $this->deleteTheJob($jobInfo);
   }

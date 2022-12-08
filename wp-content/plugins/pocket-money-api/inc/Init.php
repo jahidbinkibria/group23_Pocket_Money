@@ -16,7 +16,8 @@ class Init
       Base\Enqueue::class,
       Base\Language::class,
       Pages\PmApi::class,
-      Pages\JobsCpt::class
+      Pages\JobsCpt::class,
+      Pages\CustomColumns::class
     ];
   }
 

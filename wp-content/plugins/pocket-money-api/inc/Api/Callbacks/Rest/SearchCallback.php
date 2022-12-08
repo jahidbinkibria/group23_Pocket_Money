@@ -8,7 +8,7 @@
 namespace Inc\Api\Callbacks\Rest;
 
 use Inc\Base\BaseController;
-use Inc\Base\Helper;
+use Inc\Base\Helpers;
 use \WP_Query;
 
 class SearchCallback extends BaseController
@@ -35,7 +35,7 @@ class SearchCallback extends BaseController
       'posts_per_page' => -1,
       'orderby' => 'title',
       'order' => 'ASC',
-      'posts_per_page' => 5,
+      'posts_per_page' => 10,
       's' => sanitize_text_field($data['s'])
       // 's' => '12'
     ];
@@ -81,13 +81,15 @@ class SearchCallback extends BaseController
     // }
 
     $jobs = new WP_Query($args);
-    $result = $jobs;
 
     $jobs_data = [];
 
-    while ($result->have_posts()) {
 
-      $result->the_post();
+    $searchResult = [];
+
+    while ($jobs->have_posts()) {
+
+      $jobs->the_post();
 
       $post_id = get_the_ID();
 
@@ -115,8 +117,8 @@ class SearchCallback extends BaseController
       // $raw_data = get_post_meta($post_id, GG_PUB_CMB_PREFIX. 'raw_data', true);
 
 
-      array_push($jobs_data, array(
-        'id' => Helper::getJobHashById($post_id),
+      array_push($searchResult, array(
+        'id' => Helpers::getJobHashById($post_id),
         'title' => get_the_title(),
         // 'excerpt' => get_the_excerpt(),
         // 'category' => $category,
@@ -136,6 +138,10 @@ class SearchCallback extends BaseController
         // 'raw_data'=> $raw_data,
       ));
     }
+
+    $jobs_data['data'] = $searchResult;
+
+    $jobs_data['count'] = $jobs->found_posts;
 
 
     return $jobs_data;

@@ -127,7 +127,7 @@ class CreateCallback extends BaseController
   {
 
     $editLink = "$this->app_url/job/edit/$this->jobHashId/$this->newPostId";
-    $jobLink = "$this->app_url/job/$this->newPostId";
+    $jobLink = "$this->app_url/job/$this->jobHashId";
     return "<p>Hello $this->first_name,</p><p>Congratulations! </p><p>Your submitted <a href='$jobLink'>job post</a> published succesfully. <br>To edit/delete the job details, use this <a href='$editLink'>link</a>.<br>Thank you!</p>";
   }
 }
