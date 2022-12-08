@@ -14,19 +14,88 @@ The scope of this project includes planning ,design, flow architecture, implemen
 
 <h3>1.1 Json API End Points</h3>
 
-\*\* Update those URL later.
+- Search Job Posts:
 
-http://localhost:9000/wp-json/wp/v2/jobs
+End Point:
+/wp-json/pmapi/v1/search
 
-http://localhost:9000/wp-json/wp/v2/jobs?\_fields=author,id,excerpt,title,link
+Method:
+Get
 
-http://localhost:9000/wp-json/wp/v2/search
+Parameter: 
+s = keyword
 
-http://localhost:9000/wp-json/wp/v2/add
+- Read All Job Posts:
 
-http://localhost:9000/wp-json/wp/v2/edit/{$id}
+End Point:
+/wp-json/pmapi/v1/jobs
 
-http://localhost:9000/wp-json/wp/v2/delete/{$id}
+Method: 
+Get
+
+- Read A Single Job Post:
+
+End Point:
+/wp-json/pmapi/v1/job/
+
+Method: 
+Get
+
+Parameter: 
+p_id = 82c317c8-aa3d-42cf-88c5-81eef7c84262
+
+- Create A Job Post:
+
+End Point:
+/wp-json/pmapi/v1/create
+
+Method:
+Post
+
+Parameter: 
+taskTitle,
+taskDetails,
+taskCategory,
+firstName,
+lastName,
+contact,
+email,
+address,
+city,
+taskDay,
+taskDuration,
+taskPrice
+
+- Edit A Job Post:
+
+End Point:
+/wp-json/pmapi/v1/edit
+
+Method:
+Post
+
+Parameter: 
+
+taskTitle,
+taskDetails,
+taskDay,
+taskDuration,
+taskPrice,
+city
+
+
+- Delete A Job Post:
+
+End Point:
+wp-json/pmapi/v1/delete
+
+Method:
+Delete
+
+Parameter: 
+jobId
+
+
 
 <h4>Create A React App</h4>
 npx create-react-app frontend
